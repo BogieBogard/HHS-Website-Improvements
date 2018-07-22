@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie ie6 " lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 7]>    <html class="ie ie7 " lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 8]>    <html class="ie ie8 " lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]> <!--> <html class=" boxed" lang="en" dir="ltr"> <!--<![endif]-->
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="msvalidate.01" content="F58D1A378AACCCE4497D46D388891005" />
+<meta name="google-site-verification" content="cajLx2_xOput9zF9q4a4J96l64P-gQ6_cIJ2o4riFfA" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Uw4BVlNVGwcEVFdWBgk="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style type='text/css'>body {background-color: #CCCCCC !important;}</style> <meta name="robots" content="follow" />
+<meta name="rating" content="general" />
+<meta name="referrer" content="no-referrer" />
+<meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
+<link rel="canonical" href="questions-about-your-benefits.html" />
+<link rel="shortlink" href="https://hhs.texas.gov/node/2193" />
+<meta http-equiv="content-language" content="en_US" />
+<meta name="revisit-after" content="1 day" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta property="og:site_name" content="Texas Health and Human Services" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hhs.texas.gov/services/questions-about-your-benefits" />
+<meta property="og:title" content="Questions About Your Benefits" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://hhs.texas.gov/services/questions-about-your-benefits" />
+<meta name="twitter:title" content="Questions About Your Benefits" />
+<meta itemprop="name" content="Questions About Your Benefits" />
+<meta name="dcterms.type" content="Text" />
+<meta name="dcterms.format" content="text/html" />
+<meta name="dcterms.identifier" content="https://hhs.texas.gov/services/questions-about-your-benefits" />
+<link rel="shortcut icon" href="../sites/all/themes/custom/star/favicon.ico" type="image/vnd.microsoft.icon" />
+<title>Questions About Your Benefits | Texas Health and Human Services</title>
+<!-- Call bootstrap.css before $scripts to resolve @import conflict with respond.js -->
+<link rel="stylesheet" href="../sites/all/themes/custom/star/vendor/bootstrap/css/bootstrap.min.css">
+
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css__nt4iN78X-67CSiQIYWVlzB_fqfhw2oHEaKP7zoEhYo.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_kBSJYuYYeoT_SlTEoWFULxcVMylBYBfH81DkZ9OBMgA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://hhs.texas.gov/sites/default/files/css/css_UTfaJ35w0G8zEKrQFjDGJa_UaNEs5mGU7INNbT0zEx4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_TctAUmx9X8wbR_uT-_A_XX7yhTMggKBqQZk7kCTwefI.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_AY0vAyslI2TIuGW_9FPFoNfWEVs9oLx1Btz1klwtXbc.css" media="all" />
+    <script type="text/javascript" src="../sites/default/files/js/js_2TLJopCNtX8XmvrzAyGdu-bdXMzazsK84vvYZMTjo8M.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.google_analytics_uacct = "UA-18019217-14";
+//--><!]]>
+</script>
+<script type="text/javascript" src="../sites/default/files/js/js_ExfzsYyKUCFc7z7xOGmfLC5TAIHLnKmC_hu4bRBz_0k.js"></script>
+<script type="text/javascript" src="../sites/default/files/js/js_VrlhRgs-ITK404_OOHL1jbduSo5hG0PSNt8kycdiLSo.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+document.createElement( "picture" );
+//--><!]]>
+</script>
+<script type="text/javascript" src="../sites/default/files/js/js_UnhwDefUjNfTOpWyBFQTjatCEqW6Ak5XUveISOC6jeI.js"></script>
+<script type="text/javascript" src="https://hhs.texas.gov/sites/default/files/js/js_4KWuNinVR7vjHpSHxZWNr2Jefc2IS6FyBfkMMNZeypY.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-18019217-14", {"cookieDomain":"auto"});ga("require", "linkid", "linkid.js");ga("require", "displayfeatures");ga("set", "anonymizeIp", true);ga("set", "page", location.pathname + location.search + location.hash);ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="../sites/default/files/js/js_3IVWHlmJzTk2gaOpXjx7p4aSghjU-NxIDKIkoT0eyEE.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"star","theme_token":"rd48wxsgyUl3QmES_QTEP7oG1meJ7ywOtXtG1s5cwfM","js":{"sites\/all\/modules\/contrib\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/contrib\/picture\/picture.min.js":1,"sites\/all\/modules\/contrib\/extlink_extra\/extlink_extra.js":1,"sites\/all\/themes\/custom\/star\/js\/theme.js":1,"sites\/all\/themes\/custom\/star\/js\/theme.init.js":1,"sites\/all\/themes\/custom\/star\/js\/views\/view.home.js":1,"public:\/\/google_tag\/language\/google_tag.en.script.js":1,"0":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.core.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.widget.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.accordion.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.tabs.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.button.js":1,"1":1,"sites\/all\/modules\/contrib\/jquery_ui_filter\/jquery_ui_filter.js":1,"sites\/all\/modules\/contrib\/ckeditor_accordion\/js\/ckeditor-accordion.js":1,"sites\/all\/modules\/contrib\/extlink\/extlink.js":1,"sites\/all\/modules\/contrib\/jquery_ui_filter\/accordion\/jquery_ui_filter_accordion.js":1,"sites\/all\/modules\/contrib\/jquery_ui_filter\/tabs\/jquery_ui_filter_tabs.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/all\/themes\/custom\/star\/vendor\/modernizr\/modernizr.min.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jquery.appear\/jquery.appear.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jquery.easing\/jquery.easing.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jquery-cookie\/jquery-cookie.js":1,"sites\/all\/themes\/custom\/star\/vendor\/bootstrap\/js\/bootstrap.min.js":1,"sites\/all\/themes\/custom\/star\/vendor\/common\/common.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jquery.validation\/jquery.validation.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jquery.stellar\/jquery.stellar.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jquery.easy-pie-chart\/jquery.easy-pie-chart.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jquery.gmap\/jquery.gmap.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jquery.lazyload\/jquery.lazyload.js":1,"sites\/all\/themes\/custom\/star\/vendor\/isotope\/jquery.isotope.min.js":1,"sites\/all\/themes\/custom\/star\/vendor\/owl.carousel\/owl.carousel.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jflickrfeed\/jflickrfeed.js":1,"sites\/all\/themes\/custom\/star\/vendor\/magnific-popup\/jquery.magnific-popup.js":1,"sites\/all\/themes\/custom\/star\/vendor\/vide\/vide.js":1,"sites\/all\/themes\/custom\/star\/vendor\/circle-flip-slideshow\/js\/jquery.flipshow.js":1,"sites\/all\/themes\/custom\/star\/js\/custom.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"misc\/ui\/jquery.ui.tabs.css":1,"misc\/ui\/jquery.ui.button.css":1,"modules\/book\/book.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"sites\/all\/modules\/contrib\/ckeditor_accordion\/css\/ckeditor-accordion.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/picture\/picture_wysiwyg.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/extlink\/extlink.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/custom\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/extlink_extra\/extlink_extra.508.css":1,"sites\/all\/modules\/contrib\/navbar_extras\/modules\/navbar_shiny\/css\/navbar_shiny.css":1,"sites\/all\/themes\/custom\/star\/vendor\/owl.carousel\/assets\/owl.carousel.css":1,"sites\/all\/themes\/custom\/star\/vendor\/font-awesome\/css\/font-awesome-legacy.css":1,"sites\/all\/themes\/custom\/star\/vendor\/font-awesome\/css\/font-awesome.css":1,"sites\/all\/themes\/custom\/star\/vendor\/simple-line-icons\/css\/simple-line-icons.css":1,"sites\/all\/themes\/custom\/star\/vendor\/owl.carousel\/assets\/owl.theme.default.css":1,"sites\/all\/themes\/custom\/star\/vendor\/prettyPhoto\/css\/prettyPhoto.css":1,"sites\/all\/themes\/custom\/star\/vendor\/circle-flip-slideshow\/css\/component.css":1,"sites\/all\/themes\/custom\/star\/vendor\/magnific-popup\/magnific-popup.css":1,"sites\/all\/themes\/custom\/star\/vendor\/isotope\/jquery.isotope.css":1,"sites\/all\/themes\/custom\/star\/css\/theme.css":1,"sites\/all\/themes\/custom\/star\/css\/theme-elements.css":1,"sites\/all\/themes\/custom\/star\/css\/theme-animate.css":1,"sites\/all\/themes\/custom\/star\/css\/theme-blog.css":1,"sites\/all\/themes\/custom\/star\/css\/theme-shop.css":1,"sites\/all\/themes\/custom\/star\/css\/drupal-styles.css":1,"sites\/all\/themes\/custom\/star\/stylesheets\/style.css":1,"sites\/all\/themes\/custom\/star\/css\/custom.css":1,"sites\/all\/themes\/custom\/star\/css\/skins\/default.css":1}},"jQueryUiFilter":{"disabled":0,"accordionHeaderTag":"h3","accordionOptions":{"active":"false","animated":"slide","autoHeight":"false","clearStyle":"false","collapsible":"true","event":"click","scrollTo":0,"history":"true"},"tabsOptions":{"collapsible":"false","event":"click","fx":0,"paging":{"back":"\u0026laquo; Previous","next":"Next \u0026raquo;"},"selected":"","scrollTo":0,"history":"false"},"tabsHeaderTag":"h3"},"urlIsAjaxTrusted":{"\/site-search":true},"extlink":{"extTarget":"_blank","extClass":"ext","extLabel":"(link is external)","extImgClass":0,"extIconPlacement":"append","extSubdomains":0,"extExclude":"hhs\\.texas\\.gov","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":{"value":"  \u003Ch2\u003EYou are leaving the  [site:name] website\u003C\/h2\u003E\r\n  \u003Cp\u003EYou are being directed to a third-party website:\u003C\/p\u003E\r\n  \u003Cp\u003E\u003Cstrong\u003E[extlink:external-url]\u003C\/strong\u003E\u003C\/p\u003E\r\n  \u003Cp\u003EThis link is provided for your convenience. Please note that this third-party website is not controlled by [site:name] or subject to our privacy policy.\u003C\/p\u003E\r\n  \u003Cp\u003EThank you for visiting our site. We hope your visit was informative and enjoyable.\u003C\/p\u003E\r\n\r\n  \u003Cdiv class=\u0022extlink-extra-actions\u0022\u003E\r\n      \u003Cdiv class=\u0022extlink-extra-back-action\u0022\u003E\u003Ca title=\u0022Cancel\u0022 href=\u0022[extlink:back-url]\u0022\u003ECancel\u003C\/a\u003E\u003C\/div\u003E\r\n      \u003Cdiv class=\u0022extlink-extra-go-action\u0022\u003E\u003Ca class=\u0022ext-override\u0022 title=\u0022Go to link\u0022 href=\u0022[extlink:external-url]\u0022\u003EGo to link\u003C\/a\u003E\u003C\/div\u003E\r\n  \u003C\/div\u003E\r\n  \u003Cbr\/\u003E\u003Cbr\/\u003E\r\n  [extlink:timer]\r\n  ","format":"full_html"},"mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"extlink_extra":{"extlink_alert_type":"","extlink_alert_timer":"0","extlink_alert_url":"\/now-leaving","extlink_cache_fix":0,"extlink_exclude_warning":"","extlink_508_fix":1,"extlink_508_text":" [external link, opens in new window]","extlink_url_override":0,"extlink_url_params":{"external_url":null,"back_url":null}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackUrlFragments":1},"currentPath":"node\/2193","currentPathIsAdmin":false});
+//--><!]]>
+</script>
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]>
+<![endif]-->
+
+<!--[if IE]>
+  <link rel="stylesheet" href="../sites/all/themes/custom/star/css/ie.css">
+<![endif]-->
+
+<!--[if lte IE 8]>
+  <script src="https://hhs.texas.gov/sites/all/themes/custom/star/vendor/respond.js"></script>
+<![endif]-->
+
+<!-- Web Fonts  -->
+
+<!-- User defined CSS --><style type='text/css'>/* News Releases */
+.view-news-releases h1.news-release {font:bold 18px "Myriad Set Pro","Helvetica Neue",Helvetica,Arial,sans-serif}
+.view-news-releases .news-content {color:#030303;font-weight:normal}
+
+/* Reports/Presentations search filter box */
+.description {font-size: .8em;}
+
+/* screenreader hidden text *
+.sr-only {
+position: absolute;
+ height: 1px;
+ width: 1px;
+ clip: rect(1px 1px 1px 1px); // IE 6 and 7
+ clip: rect(1px,1px,1px,1px);
+ clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+ -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+ overflow: hidden !important;
+}
+
+
+/* EVENTS WEBCAST ICON */
+#block-views-calendar-block-5 .view-display-id-block_5  .fa-video-camera, #block-views-calendar-block-9 .view-display-id-block_9 .fa-video-camera {
+    color: #666;
+    background: #efefef;
+    padding: 10px;
+    border: 1px solid #ccc;
+    float: left;
+    margin: 7px 5px 5px 0;
+}
+
+/* Events Cancelled */
+span.cancelled {
+    color: #e00000;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #fff3e0;
+   padding: 5px;
+}
+
+/* Archived Events */
+.archived-events .pull-right {float:none !important}
+.archived-events .pagination {margin:0}
+.archived-events .pagination-lg > li > a, .archived-events .pagination-lg > li > span {font-size:14px;padding:5px}
+
+/* SB20 */
+/* make really long fifth th text small */
+th:nth-child(5) {font-size: small;}
+
+@media (min-width: 1200px) {
+form#views-exposed-form-contracts-for-sb20-page .views-widget-filter-field_effective_date_value, form#views-exposed-form-contracts-for-sb20-page  .views-widget-filter-field_expiration_date_value {width: 15%;}
+}
+
+@media (max-width: 991px) {
+form#views-exposed-form-contracts-for-sb20-page .views-exposed-widget {width: 100%;}
+}
+/* make filter title smaller */
+#block-views-exp-contracts-for-sb20-page h2 {font-size: 1.5em; margin-bottom: 0;}
+
+/* Additional Right Sidebar Styles */
+.calloutGreen2 {background:#6cc04a;background:-moz-linear-gradient(135deg, #2989d8 0%, #6cc04a 100%) repeat scroll 0 0;background:-webkit-linear-gradient(135deg, #2989d8 0%, #6cc04a 100%) repeat scroll 0 0;background:transparent linear-gradient(135deg, #2989d8 0%, #6cc04a 100%) repeat scroll 0 0;padding:1em;color:#fff;margin:1em 0}
+
+.calloutGray {background:#48484f;background:-moz-linear-gradient(-45deg, #48484f 0%, #959ca0 100%) repeat scroll 0 0;background:-webkit-linear-gradient(-45deg, #48484f 0%,#959ca0 100%) repeat scroll 0 0;background:linear-gradient(135deg, #48484f 0%,#959ca0 100%) repeat scroll 0 0;padding:1em;color:#fff;margin:1em 0}
+
+.region-sidebar-right .contact h4::before {content: "\f1d8 \00a0";font-family:fontawesome}
+.region-sidebar-right .resources h4::before {content: "\f0c1 \00a0";font-family:fontawesome}
+.region-sidebar-right .video h4::before {content: "\f144 \00a0";font-family:fontawesome}
+.region-sidebar-right .contact h4 {background:#003087;background:-moz-linear-gradient(135deg, #003087 0%, #2989d8 60%, #6cc04a 100%) repeat scroll 0 0;background:-webkit-linear-gradient(135deg, #003087 0%, #2989d8 60%, #6cc04a 100%) repeat scroll 0 0;background:linear-gradient(135deg, #003087 0%, #2989d8 60%, #6cc04a 100%) repeat scroll 0 0;padding:.5em;color:#fff}
+.region-sidebar-right .resources h4 {background:#016d77;background:-moz-linear-gradient(45deg, #016d77 0%, #00a19b 60%, #6cc04a 100%) repeat scroll 0 0;background:-webkit-linear-gradient(45deg, #016d77 0%, #00a19b 60%, #6cc04a 100%) repeat scroll 0 0;background:linear-gradient(45deg, #016d77 0%, #00a19b 60%, #6cc04a 100%) repeat scroll 0 0;padding:.5em;color:#fff}
+.region-sidebar-right .video h4 {background:#6a1b32;background:-moz-linear-gradient(135deg, #ab2328 0%, #6a1b32 60%, #ff3a1e 100%) repeat scroll 0 0;background:-webkit-linear-gradient(135deg, #ab2328 0%, #6a1b32 60%, #ff3a1e 100%) repeat scroll 0 0;background:linear-gradient(135deg, #ab2328 0%, #6a1b32 35%, #ff3a1e 100%) repeat scroll 0 0;padding:.5em;color:#fff}
+
+.ctaButton span.ext, .ctaButtonL span.ext {width:0;height:0}
+.ctaBlue a:focus, .ctaBlue a:hover, .calloutBlue a:focus, .calloutBlue a:hover, .calloutRed a:focus, .calloutRed a:hover {color:#fff;text-decoration:none}
+.content .playButton, .content .playButton:focus, .content .playButton:hover, .content .blueButton, .content .blueButton:focus, .content .blueButton:hover {color:#fff;background-color:#22599c}
+#views-exposed-form-reports-and-presentations-page-1 #edit-field-category-tid {width:100%}
+.calloutRed2 {color:#fff;margin:1em 0;padding:1em;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3a1e+0,ab2328+50,c4451f+51,890900+100 */
+background: #ff3a1e; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #ff3a1e 0%, #ab2328 50%, #c4451f 71%, #890900 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #ff3a1e 0%,#ab2328 50%,#c4451f 71%,#890900 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #ff3a1e 0%,#ab2328 50%,#c4451f 71%,#890900 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3a1e', endColorstr='#890900',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
+.calloutRed2 p, .calloutRed2 h2, .calloutRed2 h4, .calloutGray p, .calloutGray h2, .calloutGray h4 {color:#fff}
+p {line-height: 23px;}
+.node-type-book table th a {color:#fff;text-decoration:underline}
+
+.region-sidebar-right .ui-accordion ul {font-size:90%;padding:0}
+
+.pquote {  display: block; float: right; padding: 0 0 0 10px; margin: 0 0 10px 10px; font-size: 1.2em; line-height: 1em; font-style: italic; text-align: right;  width: 275px; }
+
+/* Responsive Video Wrapper */
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.col-md-9 .videoWrapper {padding-bottom: 39.25%}
+.col-md-9 .videoWrapper iframe {width:75%}
+.videoWrapperSm {
+	position: relative;
+	padding-bottom: 26.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapperSm iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+@media only screen and (max-width:965px) {
+  .videoWrapperSm {padding-bottom: 56.25%; /* 16:9 */}
+}</style><!-- End user defined CSS --><link rel="apple-touch-icon" sizes="180x180" href="../sites/all/themes/custom/star/img/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="manifest" href="../manifest.json">
+<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-2193 node-type-page i18n-en boxed"  data-target="#header" data-spy="scroll" data-offset="100">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBHRBHX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- .body -->
+<div class="body">
+          <!-- #top-bar-wrapper .clearfix v-->
+     <div id="top-bar-wrapper" class="clearfix">
+          <!-- #top-bar .clearfix -->
+          <div id="top-bar" class="clearfix">
+                 <div class="region region-top-bar">
+    <div id="block-block-52" class="block block-block">
+
+    
+  <div class="content">
+    <ul id="quick-links">
+	<li><a href="../a-z-directory.html">A-Z Index</a></li>
+	<li><a href="../about-hhs/communications-events/social-media.html">Connect</a></li>
+	<li><a href="../es.html">Español</a></li>
+	<li><a href="https://service.govdelivery.com/service/multi_subscribe.html?code=TXHHSC">Subscribe</a></li>
+	<li><a href="http://www.surveygizmo.com/s3/3000796/Texas-Health-and-Human-Services-Website-Survey">Survey</a></li>
+	<!--<li><a href="../es/quienes-somos/donde-encontrarnos.html">Contact</a></li>-->
+</ul>
+  </div>
+</div>
+  </div>
+          </div>
+          <!--/ #top-bar .clearfix -->
+     </div>
+     <!--/ #top-bar-wrapper .clearfix -->
+          <header id="header" data-plugin-options='{"stickyEnabled": false, "stickyEnableOnBoxed": false, "stickyEnableOnMobile": false, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": false}'>
+          <div class="header-body">
+               <div class="header-container container">
+               <div id="skip-link"><a href="questions-about-your-benefits.html#main-content" class="element-invisible element-focusable">Skip to main content</a></div>
+                    <div class="header-row">
+
+
+                         <div class="header-column">
+
+                                                                                          
+                                                            <div class="header-logo">
+                                   <a href="../index.html" title="Home" rel="home" id="logo">
+					        <img src="../sites/all/themes/custom/star/logo.png" alt="Home" height="94" data-sticky-height="51" data-sticky-top="33" />
+					      </a>
+
+
+                              </div>
+                              
+                                                            <div id="name-and-slogan"  class="hidden">
+
+                                                                                                         <div id="site-name"  class="hidden">
+                                        <a href="../index.html" title="Home" rel="home"><span>Texas Health and Human Services</span></a>
+                                   </div>
+                                                                      
+                                   
+                              </div>
+                              <!-- /#name-and-slogan -->
+                              
+                         </div>
+
+
+                         <div class="header-column header-column-valign-top">
+
+                                                            <div class="header-search hidden-xs">
+                                     <div class="search-wrapper">
+<form action="/site-search" method="get" id="views-exposed-form-search-english-page" accept-charset="UTF-8"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext">
+                  <label for="edit-search-api-views-fulltext">
+            Search          </label>
+                        <div class="views-widget">
+          <div class="form-item form-type-textfield form-item-search-api-views-fulltext">
+ <input placeholder="Keyword search" type="text" id="edit-search-api-views-fulltext" name="search_api_views_fulltext" value="" size="30" maxlength="128" class="form-text" />
+</div>
+        </div>
+              </div>
+                    <div class="views-exposed-widget views-submit-button">
+      <input type="submit" id="edit-submit-search-english" name="" value="Apply" class="btn-primary btn form-submit" />    </div>
+      </div>
+</div>
+</div></form></div>                              </div>
+                              
+                                                                </div>
+                         </div>
+
+
+               </div>
+
+               <div class="header-container container header-nav header-nav-push-top">
+
+                    <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
+					<i class="fa fa-bars"></i>
+				</button>
+
+
+
+                    
+                    <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
+                         <nav class="nav-main">
+                                
+<ul class="nav nav-pills nav-main" id="mainMenu"><li class="dropdown 3055"><a href="../about-hhs.html" title="About HHS" class="dropdown-toggle disabled">About HHS</a><ul class="dropdown-menu"><li><a href="../about-hhs/agencies-departments.html" title="Agencies &amp; Departments">Agencies &amp; Departments</a></li><li><a href="../about-hhs/budget-planning.html" title="Budget &amp; Planning">Budget &amp; Planning</a></li><li><a href="../about-hhs/communications-events.html" title="Communication and Events">Communications &amp; Events</a></li><li><a href="../about-hhs/community-engagement.html">Community Engagement</a></li><li><a href="../about-hhs/find-us.html" title="Find Us">Find Us</a></li><li><a href="../about-hhs/jobs-hhs.html" title="Jobs at HHS">Jobs at HHS</a></li><li><a href="../about-hhs/leadership.html" title="Leadership">Leadership</a></li><li><a href="../about-hhs/process-improvement.html">Process Improvement</a></li><li><a href="../about-hhs/records-statistics.html" title="Records and Statistics">Records and Statistics</a></li><li><a href="../about-hhs/hhs-transformation.html" title="Transformation">Transformation</a></li><li><a href="../about-hhs/your-rights.html" title="Your Rights">Your Rights</a></li></ul></li><li class="dropdown 122146 active"><a href="../hhs-services.html" title="Services" class="active-trail dropdown-toggle disabled">Services</a><ul class="dropdown-menu"><li><a href="aging.html">Aging</a></li><li><a href="disability.html">Disability</a></li><li><a href="financial.html">Financial</a></li><li><a href="health.html">Health</a></li><li><a href="mental-health-substance-use.html" class="menu-node-unpublished menu-node-unpublished">Mental Health &amp; Substance Use</a></li><li class="active"><a href="questions-about-your-benefits.html" class="active-trail active">Questions About Your Benefits</a></li><li><a href="safety.html">Safety</a></li><li><a href="service-coordination.html">Service Coordination</a></li></ul></li><li class="dropdown 3426"><a href="../doing-business-hhs.html" title="Doing Business with HHS" class="dropdown-toggle disabled">Doing Business with HHS</a><ul class="dropdown-menu"><li><a href="../doing-business-hhs/business-contracting-opportunities.html" title="Business and Contracting Opportunities">Business and Contracting Opportunities</a></li><li><a href="../doing-business-hhs/contracts-100000-more.html">Contracts of $100,000 and More</a></li><li><a href="../doing-business-hhs/grants.html" title="Grants">Grants</a></li><li><a href="../doing-business-hhs/historically-underutilized-business-opportunities-program.html">HUB Program</a></li><li><a href="http://www.dshs.texas.gov/immunize/" title="Immunizations and Vaccines">Immunizations and Vaccines</a></li><li><a href="../doing-business-hhs/licensing-credentialing-regulation.html" title="Licensing and Regulations">Licensing, Credentialing and Regulation</a></li><li><a href="../doing-business-hhs/provider-portals.html">Provider Portals</a></li><li><a href="../doing-business-hhs/provider-self-reporting.html">Provider Self-reporting</a></li><li><a href="../doing-business-hhs/training.html">Training</a></li><li><a href="../doing-business-hhs/vendor-contractor-information.html">Vendor &amp; Contractor Information</a></li></ul></li><li class="dropdown 8032"><a href="../laws-regulations.html" title="Laws and Regulations" class="dropdown-toggle disabled">Laws &amp; Regulations</a><ul class="dropdown-menu"><li><a href="../laws-regulations/forms.html">Forms</a></li><li><a href="../laws-regulations/handbooks.html">Handbooks</a></li><li><a href="../laws-regulations/legal-information.html">Legal Information</a></li><li><a href="../laws-regulations/policies-rules.html">Policies and Rules</a></li><li><a href="../laws-regulations/reports-presentations.html" class="menu-node-unpublished menu-node-unpublished">Reports &amp; Presentations</a></li></ul></li><li><a href="../about-hhs/find-us.html" title="">Contact</a></li></ul>                         </nav>
+                    </div>
+               </div>
+
+          </div>
+     </header>
+     <!-- end header -->
+
+     <div role="main" class="main">
+          			<!-- .page-title breadcrumb-wrap -->
+			<section class="page-title breadcrumb-wrap">
+				<!-- .page-title-inner -->
+				<div class="page-title-inner">
+					<!-- .container -->
+					<div class="container">
+						<!-- .row -->
+						<div class="row">
+							<div class="col-md-12">
+								<h1>Questions About Your Benefits</h1>
+							</div>
+						</div>
+						<!--/ .row -->
+					</div>
+					<!--/ .container -->
+				</div>
+				<!--/ .page-title-inner -->
+
+				<!-- .breadcrumbs-container .theme-color -->
+				<div class="breadcrumbs-container theme-color">
+										<!-- .container -->
+					<div class="container">
+						<!-- .row start -->
+						<div class="row">
+							<!-- .col-md-12 start -->
+							<div class="col-md-12">
+								<h2 class="element-invisible">You are here</h2><div class="breadcrumb"><span class="inline odd first"><a href="../index.html">Home</a></span> <span class="delimiter">></span> <span class="inline even"><a href="../hhs-services.html">Services</a></span> <span class="delimiter">></span> <span class="inline odd last">Questions About Your Benefits</span></div>							</div>
+							<!-- .col-md-12 end -->
+						</div>
+						<!-- .row end -->
+					</div>
+					<!--/ .container -->
+									</div>
+				<!--/ .breadcrumbs-container .theme-color -->
+
+			</section>
+			<!--/ .page-title breadcrumb-wrap -->
+                    <!--/ end surgery -->
+
+          		<!-- #content .content .full -->
+          <div id="content" class="content full">
+			<!-- .container -->
+               <div class="container">
+                    <!-- .row -->
+                    <div class="row">
+
+                         <div class="col-md-12">
+                                                       </div>
+
+                                                  <aside id="sidebar-left">
+                              <div class="col-md-3 ">
+                                   <div id="sticky-sidebar">
+                                          <div class="region region-sidebar-left">
+    
+<div id="block-menu-menu-services" class="block block-menu">
+
+    <h4>Services</h4>
+  
+  <div class="content">
+    <ul class="menu"><li class="first collapsed"><a href="aging.html" title="">Aging</a></li>
+<li class="collapsed"><a href="disability.html" title="">Disability</a></li>
+<li class="collapsed"><a href="financial.html" title="">Financial</a></li>
+<li class="expanded active-trail"><a href="health.html" title="" class="active-trail">Health</a><ul class="menu"><li class="first collapsed"><a href="https://hhs.texas.gov/services/health/clinics-health-organizations-resource-centers" title="">Clinics, Health Organizations and Resource Centers</a></li>
+<li class="collapsed"><a href="https://hhs.texas.gov/services/health/food-fitness" title="">Food and Fitness</a></li>
+<li class="expanded active-trail"><a href="health/medicaid-chip.html" title="" class="active-trail">Medicaid and CHIP</a><ul class="menu"><li class="first collapsed"><a href="https://hhs.texas.gov/services/health/medicaid-chip/about-medicaid-chip" title="">About Medicaid and CHIP</a></li>
+<li class="expanded active-trail"><a href="https://hhs.texas.gov/services/health/medicaid-chip/medicaid-chip-programs" title="" class="active-trail">Programs</a><ul class="menu"><li class="first leaf"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/adoption-assistance-or-permanency-care-assistance-managed-care-expansion" title="" class="menu-node-unpublished menu-node-unpublished">Adoption Assistance or Permanency Care Assistance</a></li>
+<li class="leaf"><a href="https://yourtexasbenefits.hhsc.texas.gov/programs/health/young-adults-and-families" title="">Adult Caring for Child</a></li>
+<li class="leaf"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/medicaid-buy-adults" title="">Buy-in for Adults</a></li>
+<li class="collapsed"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/chip" title="">CHIP</a></li>
+<li class="leaf"><a href="https://yourtexasbenefits.hhsc.texas.gov/programs/health/child/childrens-medicaid" title="">Children&#039;s Medicaid</a></li>
+<li class="leaf"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/community-first-choice" title="">Community First Choice</a></li>
+<li class="leaf"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/dual-eligible-project-mmp" title="">Dual Eligible Project (MMP)</a></li>
+<li class="leaf"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/managed-care-report-cards" title="">Managed Care Report Cards (CHIP, STAR, STAR+PLUS)</a></li>
+<li class="leaf"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/medicaid-adults">Medicaid for Adults</a></li>
+<li class="leaf"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/medicaid-breast-cervical-cancer-program-managed-care-expansion" title=""> Medicaid for Breast and Cervical Cancer Program</a></li>
+<li class="collapsed"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/medical-dental-plans" title="">Medical and Dental Plans</a></li>
+<li class="collapsed"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/mental-health-substance-use-disorder-parity" title="">Mental Health and Substance Use Disorder Parity</a></li>
+<li class="leaf"><a href="https://www.mychildrensmedicaid.org/" title="">MyChildrensMedicaid.org</a></li>
+<li class="leaf"><a href="https://yourtexasbenefits.hhsc.texas.gov/programs/health/women/pregnant" title="">Pregnant Women</a></li>
+<li class="collapsed"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/star-medicaid-managed-care-program" title="">STAR</a></li>
+<li class="leaf"><a href="http://www.dfps.state.tx.us/Child_Protection/Medical_Services/guide-star.asp" title="">STAR Health</a></li>
+<li class="expanded active-trail"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/star-kids" title="" class="active-trail">STAR Kids</a><ul class="menu"><li class="first leaf"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/star-kids/star-kids-comparison-charts" title="">Comparison Charts</a></li>
+<li class="leaf"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/star-kids/star-kids-managed-care-organizations-mcos-provider-relations-contacts" title="">MCO Provider Relations Contacts</a></li>
+<li class="last leaf active-trail"><a href="questions-about-your-benefits.html#star-kids" title="" class="active-trail active">Report Cards</a></li>
+</ul></li>
+<li class="collapsed"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/starplus" title="">STAR+PLUS</a></li>
+<li class="leaf"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/your-texas-benefits-medicaid-id-card" title="">Your Texas Benefits Medicaid ID Card</a></li>
+<li class="last leaf"><a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/texas-medicaid-chip-wellness-program" title="">Wellness Program</a></li>
+</ul></li>
+<li class="last collapsed"><a href="https://hhs.texas.gov/services/health/medicaid-chip/provider-information" title="">Provider Information</a></li>
+</ul></li>
+<li class="leaf"><a href="https://hhs.texas.gov/services/health/medicare" title="">Medicare</a></li>
+<li class="collapsed"><a href="https://hhs.texas.gov/services/health/palliative-care" title="">Palliative Care</a></li>
+<li class="collapsed"><a href="https://hhs.texas.gov/services/health/prevention" title="">Prevention</a></li>
+<li class="last collapsed"><a href="https://hhs.texas.gov/services/health/women-children">Women &amp; Children</a></li>
+</ul></li>
+<li class="collapsed"><a href="mental-health-substance-use.html" title="">Mental Health &amp; Substance Use</a></li>
+<li class="collapsed"><a href="questions-about-your-benefits.html" title="" class="active">Questions About Your Benefits</a></li>
+<li class="collapsed"><a href="safety.html" title="">Safety</a></li>
+<li class="last leaf"><a href="service-coordination.html" title="">Service Coordination</a></li>
+</ul>  </div>
+</div>
+  </div>
+                                   </div>
+                              </div>
+                         </aside>
+                         
+                         <div class="col-md-9 ">
+
+                                                            <!--/ -->
+                              
+                              						<!-- start var=pre_content -->
+												<!--/ end var=pre_content -->
+            <!--PAGEWATCH--> 
+                           <!-- hi mom -->
+                          <div id="main-content">
+                           
+                               <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-2193" class="node node-page en clearfix" about="/services/questions-about-your-benefits" typeof="foaf:Document">
+
+  
+      <span property="dc:title" content="Questions About Your Benefits" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    
+  <div class="field-body">
+    <p><a class="langButton" href="https://hhs.texas.gov/es/servicios/preguntas-sobre-sus-beneficios" title="Información en español">Español</a></p>
+
+<h2>Renewing or Repaying Benefits</h2>
+
+<div id="jquery-ui-filter--2" class="jquery-ui-filter jquery-ui-filter-accordion">
+
+<h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">Renewing Health-care Benefits</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>Renewing your benefits is easy. We'll send you a letter when it's time to renew your benefits. If you need to sign a renewal form you can:</p>
+
+<ul>
+	<li><a href="https://www.yourtexasbenefits.com/ssp/SSPHome/ssphome.jsp">Sign it electronically on YourTexasBenefits.com</a></li>
+	<li>Call 2-1-1 to have a paper form mailed to you</li>
+</ul>
+
+<p>To learn more, go to the Help Center at <a href="https://www.yourtexasbenefits.com/ssp/SSPHome/ssphome.jsp">YourTexasBenefits.com</a>.</p>
+
+</div><h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">Repay Benefits</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>If the Texas Health and Human Services Commission (HHSC) sent you a letter saying you need to repay part of your benefits, you can do that online using the <a href="https://apps.portal.texas.gov/FeePay/TX/HHSC/3/en/Welcome/WelcomeView">HHSC online payment system</a>.</p>
+</div>
+</div>
+
+<h2>Medicaid</h2>
+
+<p><img alt="Renewing Health-care Benefits" class="pull-right" src="https://hhs.texas.gov/sites/default/files/assets/services/qa-benefits.jpg" /></p>
+
+<p>In Texas, there are 5 different types of Medicaid:</p>
+
+<ul>
+	<li>STAR</li>
+	<li>STAR+PLUS</li>
+	<li>STAR Kids</li>
+	<li>STAR Health</li>
+	<li><a href="questions-about-your-benefits.html#traditional-medicaid">Traditional Medicaid</a></li>
+</ul>
+
+<p>The type of Medicaid coverage you gets depends on where you live and what kind of health issues you have.</p>
+
+<p>If you don't know what type of Medicaid you have, call toll-free 800-964-2777.</p>
+
+<div id="jquery-ui-filter--3" class="jquery-ui-filter jquery-ui-filter-accordion">
+
+<h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">Traditional Medicaid</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>You get traditional Medicaid if you are not in STAR, STAR+PLUS, STAR Kids or STAR Health. To learn more, read the member handbook.</p>
+
+<ul>
+	<li><a href="http://www.tmhp.com/TMHP_File_Library/Medicaid/Client/2017%20FFS%20Handbook_English.pdf">Member Handbook in English</a></li>
+	<li><a href="http://www.tmhp.com/TMHP_File_Library/Medicaid/Client/2017%20FFS%20Handbook_Spanish.pdf">Member Handbook in Spanish</a></li>
+</ul>
+
+</div><h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">STAR</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>You can find the STAR health plans in your area by using the <a href="https://chipmedicaid.org/en/Find-A-Medical-Plan">Find Your Medical Plan</a> search tool. You can see how well some STAR health plans perform by looking at the <a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/managed-care-report-cards">STAR health plan report cards</a>. These plans currently provide services in Texas:</p>
+
+<ul>
+	<li><a href="https://www.aetnabetterhealth.com/texas/members/medicaid/">Aetna Better Health </a></li>
+	<li><a href="https://www.myamerigroup.com/TX/Pages/star.aspx">Amerigroup </a></li>
+	<li><a href="https://www.bcbstx.com/star">Blue Cross and Blue Shield of Texas </a></li>
+	<li><a href="https://www.christushealthplan.org/medicaid-chip/medicaid-overview">CHRISTUS Health Plan </a></li>
+	<li><a href="http://www.cfhp.com/members/starmedicaid/">Community First Health Plans </a></li>
+	<li><a href="https://www.communityhealthchoice.org/en-us/Plans-Benefits/Texas-STAR-Plan">Community Health Choice </a></li>
+	<li><a href="http://www.cookchp.org/English/members/STAR-members/Pages/default.aspx">Cook Children's Health Plan </a></li>
+	<li><a href="https://www.dellchildrens.net/health-plan/more-info/">Dell Children's Health Plan</a></li>
+	<li><a href="http://driscollhealthplan.com/programs/star">Driscoll Children's Health Plan </a></li>
+	<li><a href="http://www.elpasohealth.com/programs/star_program/">El Paso First Health Plans </a></li>
+	<li><a href="http://firstcare.com/en/Individuals-and-Families/STAR-Medicaid">FirstCare Health Plans </a></li>
+	<li><a href="http://www.molinahealthcare.com/members/tx/en-US/hp/medicaid/star/Pages/star.aspx">Molina Healthcare </a></li>
+	<li><a href="http://www.parklandhmo.com/healthfirst/">Parkland HEALTHfirst </a></li>
+	<li><a href="http://rightcare.swhp.org/en-us/">Right Care from Scott &amp; White </a></li>
+	<li><a href="https://www.superiorhealthplan.com/members/medicaid/benefits-services/star-medicaid.html">Superior HealthPlan </a></li>
+	<li><a href="http://www.texaschildrenshealthplan.org/what-we-offer/star">Texas Children's Health Plan </a></li>
+	<li><a href="http://www.uhccommunityplan.com/tx/medicaid/star.html">UnitedHealthcare Community Plan </a></li>
+</ul>
+
+</div><h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">STAR Kids</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>STAR Kids is Medicaid managed care program that provides benefits to children and adults 20 and younger who have disabilities. These plans currently provide services in Texas:</p>
+
+<ul>
+	<li><a href="https://www.aetnabetterhealth.com/texas/become-a-member/starkids/">Aetna </a></li>
+	<li><a href="https://myamerigroup.com/TX/Pages/star-kids.aspx">Amerigroup </a></li>
+	<li><a href="https://www.bcbstx.com/starkids/">Blue Cross and Blue Shield of Texas </a></li>
+	<li><a href="https://www.childrensmedicalcenterhealthplan.com/home/star-kids">Children's Medical Center </a></li>
+	<li><a href="http://www.cfhp.com/members/star-kids/">Community First Health Plans </a></li>
+	<li><a href="http://www.cookchp.org/English/members/star-kids/Pages/default.aspx">Cook's Children Health Plan </a></li>
+	<li><a href="http://driscollhealthplan.com/programs/star-kids">Driscoll Health </a></li>
+	<li><a href="https://www.superiorhealthplan.com/members/medicaid/benefits-services/star-kids.html">Superior Health Plan </a></li>
+	<li><a href="http://www.texaschildrenshealthplan.org/what-we-offer/star-kids">Texas Children's Health Plan </a></li>
+	<li><a href="http://www.uhccommunityplan.com/tx/medicaid/star_kids.html">United Healthcare </a></li>
+</ul>
+
+</div><h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">STAR+PLUS</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>You can find the STAR+PLUS health plans in your area by using the <a href="https://chipmedicaid.org/en/Find-A-Medical-Plan">Find Your Medical Plan</a> search tool. You can see how well some STAR+PLUS health plans perform by looking at the <a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/managed-care-report-cards">STAR+PLUS health plan report cards</a>. These plans currently provide services in Texas:</p>
+
+<ul>
+	<li><a href="https://www.myamerigroup.com/TX/Pages/star-plus.aspx">Amerigroup </a></li>
+	<li><a href="http://starplus.mycignahealthspring.com/">Cigna-HealthSpring </a></li>
+	<li><a href="http://www.molinahealthcare.com/members/tx/en-US/hp/medicaid/starplus/Pages/starplus.aspx">Molina Healthcare of Texas </a></li>
+	<li><a href="https://www.superiorhealthplan.com/members/medicaid/benefits-services/star-plus.html">Superior HealthPlan </a></li>
+	<li><a href="http://www.uhccommunityplan.com/tx/medicaid/star_plus.html">UnitedHealthcare Community Plan </a></li>
+</ul>
+
+</div><h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">Medicare-Medicaid Plans</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>Some people get both Medicaid and Medicare. These plans currently provide services in Texas:</p>
+
+<h4>Bexar Service Area</h4>
+
+<ul>
+	<li><a href="https://www.myamerigroup.com/txmmp/pages/aboutus.aspx">Amerigroup </a></li>
+	<li><a href="http://www.molinahealthcare.com/members/tx/en-US/hp/duals/Pages/duals.aspx">Molina </a></li>
+	<li><a href="http://mmp.superiorhealthplan.com/">Superior</a></li>
+</ul>
+
+<h4>Dallas Service Area</h4>
+
+<ul>
+	<li><a href="http://www.molinahealthcare.com/members/tx/en-US/hp/duals/Pages/duals.aspx">Molina </a></li>
+	<li><a href="http://mmp.superiorhealthplan.com/">Superior </a></li>
+</ul>
+
+<h4>El Paso Service Area</h4>
+
+<ul>
+	<li><a href="https://www.myamerigroup.com/txmmp/pages/aboutus.aspx">Amerigroup </a><br />
+	<a href="http://www.molinahealthcare.com/members/tx/en-US/hp/duals/Pages/duals.aspx">Molina </a></li>
+</ul>
+
+<h4>Harris Service Area</h4>
+
+<ul>
+	<li><a href="https://www.myamerigroup.com/txmmp/pages/aboutus.aspx">Amerigroup </a></li>
+	<li><a href="http://www.molinahealthcare.com/members/tx/en-US/hp/duals/Pages/duals.aspx">Molina </a></li>
+	<li><a href="http://www.uhccommunityplan.com/tx/medicaid/Connected.html">UnitedHealthcare </a></li>
+</ul>
+
+<h4>Hidalgo Service Area</h4>
+
+<ul>
+	<li><a href="http://www.cigna.com/sites/careplantx/index.html">Cigna-HealthSpring </a></li>
+	<li><a href="http://www.molinahealthcare.com/members/tx/en-US/hp/duals/Pages/duals.aspx">Molina</a></li>
+	<li><a href="http://mmp.superiorhealthplan.com/">Superior</a></li>
+</ul>
+
+<h4>Tarrant Service Area</h4>
+
+<ul>
+	<li><a href="https://www.myamerigroup.com/txmmp/pages/aboutus.aspx">Amerigroup </a></li>
+	<li><a href="http://www.dfps.state.tx.us/Child_Protection/Medical_Services/guide-star.asp">STAR Health</a></li>
+	<li><a href="http://www.fostercaretx.com/">Superior HealthPlan </a></li>
+</ul>
+
+</div><h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">Texas Medicaid Wellness Program</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>The Texas Medicaid Wellness Program is a special health program for people who get Medicaid and have long-lasting or serious health conditions. These conditions can include asthma, diabetes, congestive heart failure, coronary artery disease, chronic obstructive pulmonary disease (COPD), and others.</p>
+
+<p>People in this program can get help any time of day or night with:</p>
+
+<ul>
+	<li>Getting an answer to a health question.</li>
+	<li>Finding a main doctor.</li>
+	<li>Managing their health between doctor visits.</li>
+	<li>Learning more about their health conditions.</li>
+	<li>Knowing how to take their medicines.</li>
+	<li>Picking the best medical care for their health.</li>
+</ul>
+
+<p><a href="https://hhs.texas.gov/services/health/medicaid-chip/provider-information/texas-medicaid-chip-wellness-program">Learn more about the Wellness Program</a>.</p>
+</div>
+</div>
+
+<h2>Medicaid and Lone Star Cards</h2>
+
+<div id="jquery-ui-filter--4" class="jquery-ui-filter jquery-ui-filter-accordion">
+
+<h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">Your Texas Benefits Medicaid ID Card and Medicaid Website</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>The Your Texas Benefits Medicaid card is your permanent ID card. Take it with you whenever you go to the doctor, dentist, or drug store. Protect it the way you would your driver's license or credit card. If you lost your card or it got damaged, you can order a new one by visiting <a href="https://www.yourtexasbenefits.com/ssp/SSPHome/ssphome.jsp">YourTexasBenefits.com </a> or by calling 1-855-827-3748. That's a toll-free call. Through this site, adult Medicaid clients can also view your available health information.</p>
+
+<p>To learn more about the Your Texas Benefits Medicaid ID card and available health information, check the <a href="https://hhs.texas.gov/services/questions-about-your-benefits/medicaid-card-questions-answers">frequently asked questions</a> we have posted.</p>
+
+</div><h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">Lone Star Card</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>HHSC gives SNAP food benefits and TANF cash help payments through the <a href="https://hhs.texas.gov/services/financial/lone-star-card">Lone Star Card</a>. It is a plastic card that is used like a debit card to pay for items.</p>
+
+<p>If your card is lost or stolen, or if you forgot your PIN (password), call us as soon as you can 1-800-777-7328 (toll-free).</p>
+
+<p>To learn more, go to the <a href="https://hhs.texas.gov/services/financial/lone-star-card/lone-star-faqs">Lone Star Card Questions and Answers page</a>.</p>
+</div>
+</div>
+
+<h2>Finding Providers</h2>
+
+<div id="jquery-ui-filter--5" class="jquery-ui-filter jquery-ui-filter-accordion">
+
+<h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">Find a Doctor</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>You can use our search tool to find a doctor who gives Medicaid services. There are two types of searches — the Basic Search and the Advanced Search. The Advanced Search gives you more options to help you narrow your search. For example, you can look up a doctor by the language they speak, find doctors who work on the weekends and find a doctor that will see someone your age.</p>
+
+<p>The Basic Search, Advanced Search and text in Spanish options will be on the top of these web pages: <a href="http://opl.tmhp.com/ProviderManager/AdvSearch.aspx">Start your search </a></p>
+
+</div><h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">Find a Drug Store</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>You can use our search tools to find a drug store that takes Medicaid or CHIP.</p>
+
+<ul>
+	<li><a href="https://www.txvendordrug.com/providers">Find drug stores that take Medicaid for adults and children </a></li>
+	<li><a href="https://www.txvendordrug.com/providers">Find drug stores that deliver </a></li>
+</ul>
+
+<p>Need medical supplies?</p>
+
+<p><a href="https://www.txvendordrug.com/formulary/search/products?field_drug_ndc_value=&title=&field_drug_generic_value=&field_product_class_dropdown_tid=All">Learn how you can get some supplies, such as insulin syringes and inhalers, at drug stores that take Medicaid</a>.</p>
+
+<h4>Does your child or youth need vitamins or minerals?</h4>
+
+<p>Medicaid will cover the costs for some vitamin and mineral products if you have a written doctor's order (a prescription). You now can go to any Medicaid drug store to get them.</p>
+
+<h4>Do you know how often you can refill your drugs?</h4>
+
+<p>Some drugs must be used by 90 percent before you can get a refill [<a href="https://www.txvendordrug.com/formulary/search/drugs?field_drug_ndc_value=&title=&field_drug_generic_value=&field_pdl_drug_class_tid=All&field_90_percent_utilization_value%5B%5D=1">List of drugs that must be used by 90 percent before refilling</a>]. For all other drugs, you must use 75 percent before refilling. If it looks like you will run out of your drugs sooner, talk to your doctor or pharmacist. If you have questions, call 800-335-8957. When you call, pick a language and then press 6.</p>
+</div>
+</div>
+
+<h2>CHIP and Children's Medicaid</h2>
+
+<div id="jquery-ui-filter--6" class="jquery-ui-filter jquery-ui-filter-accordion">
+
+<h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">MyChildrensMedicaid.org</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>Need to know more about your child's Medicaid benefits? Do you have questions about Texas Health Steps? <a href="https://www.mychildrensmedicaid.org/">MyChildrensMedicaid.org</a> is your online source for facts about Children's Medicaid and the checkups and services your child gets through Texas Health Steps.</p>
+
+</div><h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">Children's Health Insurance Program (CHIP) Health Plans</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>Children in <a href="https://chipmedicaid.org/">CHIP</a> get services through a medical plan in their area. Some CHIP plans also offer services to mothers who are pregnant. This is called <a href="https://chipmedicaid.org/en/CHIP-Perinatal">CHIP perinatal coverage</a>.</p>
+
+<p>You can find the CHIP health plans in your area by using the <a href="https://chipmedicaid.org/en/Find-A-Medical-Plan">Find Your Medical Plan</a> search tool. You can see how well some CHIP health plans perform by looking at the <a href="https://hhs.texas.gov/services/health/medicaid-chip/programs/report-cards">CHIP health plan report cards</a>.</p>
+
+<ul>
+	<li><a href="https://www.aetnabetterhealth.com/texas/members/chip/">Aetna Better Health </a></li>
+	<li><a href="https://www.myamerigroup.com/TX/Pages/chip.aspx">Amerigroup </a></li>
+	<li><a href="https://www.bcbstx.com/chip">BlueCross and BlueShield of Texas </a></li>
+	<li><a href="https://www.christushealthplan.org/medicaid-chip/chip-overview">CHRISTUS Health Plan </a></li>
+	<li><a href="http://www.cfhp.com/members/childrens-health-insurance-program/">Community First Health Plans </a></li>
+	<li><a href="https://www.communityhealthchoice.org/en-us/plans-benefits/texas-chip-plan/">Community Health Choice </a></li>
+	<li><a href="http://www.cookchp.org/English/members/CHIP-members/Pages/default.aspx">Cook Children's Health Plan </a></li>
+	<li><a href="https://www.dellchildrens.net/health-plan/more-info/">Dell Children's Health Plan</a></li>
+	<li><a href="http://driscollhealthplan.com/programs/chip">Driscoll Children's Health Plan </a></li>
+	<li><a href="http://www.elpasohealth.com/programs/el-paso-health-chip/">El Paso First CHIP </a></li>
+	<li><a href="http://firstcare.com/en/Individuals-and-Families/CHIP">FirstCare CHIP </a></li>
+	<li><a href="http://www.molinahealthcare.com/members/tx/en-US/mem/chip/Pages/chip.aspx">Molina Healthcare of Texas </a></li>
+	<li><a href="https://www.parklandhmo.com/kidsfirst/">Parkland KIDSfirst</a></li>
+	<li><a href="https://www.superiorhealthplan.com/members/medicaid/benefits-services/chip.html">Superior HealthPlan </a></li>
+	<li><a href="http://www.texaschildrenshealthplan.org/what-we-offer/chip">Texas Children's Health Plan </a></li>
+	<li><a href="http://www.uhccommunityplan.com/tx/chip/chip.html">UnitedHealthcare Community Plan </a></li>
+</ul>
+
+</div><h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">How to Pay Your CHIP Enrollment Fee</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>You can either pay online or by mail.</p>
+
+<h4>Pay Online</h4>
+
+<p>You may pay a CHIP enrollment fee <a href="https://www.texasonline.state.tx.us/tolapp/viewandpay?configid=HHSC_CHIP&licenseid=01&XXtask=1">online with a credit card</a>. There is a $2 charge to pay online.</p>
+
+<h4>Pay by Mail</h4>
+
+<p>If you would like to pay by check or money order, you can send your payment to:</p>
+
+<p>CHIP<br />
+P.O. Box 660287<br />
+Dallas, TX 75266-9792</p>
+
+<p>To learn more about CHIP, visit the <a href="https://chipmedicaid.org/">CHIP and Children's Medicaid website</a>.</p>
+
+</div><h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">CHIP and Children's Medicaid Dental Services</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>Most children and teens with CHIP or Children's Medicaid coverage get their dental services through a managed care dental plan. There are two dental plans to choose from.</p>
+
+<p>Those with Medicaid who do not get their dental services through one of those two plans include:</p>
+
+<ul>
+	<li>People with Medicaid age 21 and older.</li>
+	<li>All people with Medicaid, regardless of their age, who live in facilities such as nursing homes, state supported living centers, or community-based Intermediate Care Facilities for Individuals with an Intellectual Disability or Related Conditions (ICF/IID).</li>
+	<li>Children and young adults in the state's foster care program who get their dental services through STAR Health.</li>
+</ul>
+
+<h4>CHIP and Children's Medicaid Dental Plans</h4>
+
+<ul>
+	<li><a href="http://www.dentaquest.com/state-plans/regions/texas/">DentaQuest </a></li>
+	<li><a href="http://www.mcnatx.net/en/home/">MCNA Dental </a></li>
+</ul>
+</div>
+</div>
+
+<h2>Help Paying for Private Insurance</h2>
+
+<div id="jquery-ui-filter--7" class="jquery-ui-filter jquery-ui-filter-accordion">
+
+<h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">Health Insurance Premium Payment</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>The Health Insurance Premium Payment program (HIPP) is a Medicaid program that helps families pay for private health insurance. This program is for families who have:</p>
+
+<ul>
+	<li>A parent or a spouse with private health insurance</li>
+	<li>A child or a spouse with Medicaid</li>
+</ul>
+
+<p>Medicaid will pay the family's private health insurance if the total cost of that insurance is less than the total cost of care with Medicaid. The total cost of the private insurance includes the premium, coinsurance and deductibles.</p>
+
+<p>If approved, Medicaid may pay the private health insurance costs for the entire family and not just for the family members who get Medicaid. The family will get services through the private health insurance plan.</p>
+
+<p>To learn more or to apply, visit the <a href="https://hhs.texas.gov/services/financial/health-insurance-premium-payment-hipp-program">Get HIPP Texas website </a> or call us toll-free at 800-440-0493. You also can ask us to send you an application. Write to:</p>
+
+<p>Texas Health and Human Services Commission<br />
+TMHP-HIPP<br />
+P.O. Box 201120<br />
+Austin, Texas 78720-1120</p>
+</div>
+</div>
+
+<h2>Help Getting to Providers</h2>
+
+<div id="jquery-ui-filter--8" class="jquery-ui-filter jquery-ui-filter-accordion">
+
+<h3 class="jquery-ui-filter-header jquery-ui-filter-accordion-header">How to Get a Ride to the Doctor, Dentist or Drug Store</h3><div class="jquery-ui-filter-container jquery-ui-filter-accordion-container">
+
+<p>If you need a ride to the doctor or dentist's office, hospital, drug store or any place you get Medicaid services, call us toll-free.</p>
+
+<ul>
+	<li>Houston/Beaumont area: 855-687-4786</li>
+	<li>Dallas area: 855-687-3255</li>
+	<li>Everyone else: 877-633-8747 (877-MED-TRIP)</li>
+</ul>
+
+<p>To get a ride, you or your child must be on Medicaid or be in the Children with Special Health Care Needs program. You also must not have any other way to get to the doctor or drug store.</p>
+
+<p>Before you call for a ride you must have already set up a time to see a doctor. To get a ride:</p>
+
+<ul>
+	<li>Call us at least 2 work days or more before you need a ride. If you will need to travel a long way out of town to see your doctor, call us at least 5 work days before you need a ride. If you need a ride the same day you call us, we will do everything we can to help, but we can't promise we will be able to get you a ride.</li>
+	<li>Tell us your Medicaid ID, Children with Special Health Care Needs program number or your Social Security number.</li>
+	<li>Tell us the address where we will pick you up. If there is a phone number at the place we are picking you up, we need that too.</li>
+	<li>Tell us the name, address and phone number of the doctor or drug store where you need to go.</li>
+	<li>Tell us the date and time of your doctor's visit.</li>
+	<li>Tell us if you or your children have any special needs so we can send the right type of vehicle. For example, for people who use a wheelchair, we can send a van with a wheelchair ramp.</li>
+</ul>
+
+<p><a href="https://hhs.texas.gov/services/questions-about-your-benefits/getting-a-ride-frequently-asked-questions">Learn more about getting a ride</a>.</p>
+</div>
+</div>
+  </div>
+  </div>
+
+  
+  
+</div>
+  </div>
+</div>
+  </div>
+                          
+                          </div>
+                           <!--/ bye mom -->
+            <!--/PAGEWATCH-->
+                         </div>
+
+                         
+                    </div>
+                    <!--/ .row -->
+
+               </div>
+               <!--/ -->
+
+          </div>
+          <!--/ -->
+
+     </div>
+     <!--/ -->
+
+     
+     <footer id="footer">
+                    <div class="container main-footer">
+               <div class="row">
+
+                    
+                                        <div class="col-md-3">
+                           <div class="region region-footer-1">
+      <div class="region region-footer-1">
+      <div class="region region-footer-1">
+    <div id="block-menu-menu-footer-1" class="block block-menu">
+
+    <h2>Website</h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="../policies-practices-privacy.html" title="">Accessibility</a></li>
+<li class="leaf"><a href="../policies-practices-privacy.html#copyright" title="">Copyright/Disclaimer</a></li>
+<li class="leaf"><a href="../about-hhs/find-us/email-encryption.html" title="">Email Encryption</a></li>
+<li class="leaf"><a href="../file-viewing-information.html" title="">File Viewing</a></li>
+<li class="leaf"><a href="../policies-practices-privacy.html#links" title="">Links</a></li>
+<li class="leaf"><a href="../policies-practices-privacy.html#security" title="">Site Privacy and Security</a></li>
+<li class="last leaf"><a href="mailto:webmaster@hhsc.state.tx.us?subject=Problem with HHS website" title="">Report Website Problems</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </div>
+  </div>
+                    </div>
+                    
+                                        <div class="col-md-3">
+                           <div class="region region-footer-2">
+      <div class="region region-footer-2">
+    <div id="block-menu-menu-footer-2" class="block block-menu">
+
+    <h2>About HHS</h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="../about-hhs/your-rights/compact-texans.html" title="">Compact with Texans</a></li>
+<li class="leaf"><a href="../policies-practices-privacy.html#ethics" title="">Ethics Policy</a></li>
+<li class="leaf"><a href="../about-hhs/find-us.html" title="">Find Us</a></li>
+<li class="leaf"><a href="https://yourtexasbenefits.hhsc.texas.gov/" title="">How to Get Help</a></li>
+<li class="leaf"><a href="../about-hhs/jobs-hhs.html" title="">Jobs at HHS</a></li>
+<li class="leaf"><a href="../health-human-services-agencies-notice-privacy-practices.html" title="">Notice of Privacy Practices</a></li>
+<li class="leaf"><a href="https://oig.hhsc.texas.gov/report-fraud" title="">Report Fraud, Waste and Abuse</a></li>
+<li class="last leaf"><a href="https://yourtexasbenefits.com/ssp/SSPHome/ssphome.jsp" title="">Your Texas Benefits</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </div>
+                    </div>
+                    
+                                        <div class="col-md-3">
+                           <div class="region region-footer-3">
+      <div class="region region-footer-3">
+    <div id="block-menu-menu-footer-3" class="block block-menu">
+
+    <h2>State of Texas</h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="https://www.tsl.texas.gov/trail/index.html" title="">Statewide Search</a></li>
+<li class="leaf"><a href="https://www.texas.gov/" title="">Texas.gov</a></li>
+<li class="leaf"><a href="http://gov.texas.gov/hsgd" title="">Texas Homeland Security</a></li>
+<li class="last leaf"><a href="http://veterans.portal.texas.gov/" title="">Texas Veteran&#039;s Portal</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </div>
+                    </div>
+                    
+                                        <div class="col-md-4">
+                           <div class="region region-footer-4">
+      <div class="region region-footer-4">
+    <div id="block-block-906" class="block block-block">
+
+    <h2>HHS Social Media</h2>
+  
+  <div class="content">
+    <p>Keep up with what’s new at HHS.<br />
+Visit our social media directory.</p>
+
+<p><a href="../about-hhs/communications-events/social-media.html" title="Visit our social media directory."><img alt="Visit our social media directory" src="../sites/default/files/assets/socialfooter.png" /> </a></p>
+  </div>
+</div>
+  </div>
+  </div>
+                    </div>
+                    
+               </div>
+          </div>
+                    <!-- .footer-copyright -->
+          <div class="footer-copyright">
+               <div class="container">
+                    <div class="row">
+                         <div class="col-md-6">
+
+                                                                                          
+                         </div>
+                         <div class="col-md-6">
+
+                                                                                          
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <!--/ .footer-copyright -->
+     </footer>
+     <!--/ footer -->
+</div>
+<script type="text/javascript" src="../sites/default/files/js/js_YahudoGDptCjQYHFrgDsJGi10zzAFfyf-zVAqrbf5mE.js"></script>
+<script type="text/javascript" src="../sites/default/files/js/js_txvBmhHmVRTlr_VZe3_8vJSUc67vgUNbG7zLoAab5gA.js"></script>
+
+<!-- start 3rd party scripts -->
+
+<!--/ end 3rd party scripts -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e4e002b3c6","applicationID":"4406418","transactionName":"MVdVMUBQC0AAV0MLWwgddgZGWApdTkRWBVE5X1YLU1YAQT5aWAZROUReAEVuFVIGUQ==","queueTime":0,"applicationTime":771,"atts":"HRBWRwhKGE4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie ie6 " lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 7]>    <html class="ie ie7 " lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 8]>    <html class="ie ie8 " lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]> <!--> <html class=" boxed" lang="en" dir="ltr"> <!--<![endif]-->
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta name="msvalidate.01" content="F58D1A378AACCCE4497D46D388891005" />
+<meta name="google-site-verification" content="cajLx2_xOput9zF9q4a4J96l64P-gQ6_cIJ2o4riFfA" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Uw4BVlNVGwcEVFdWBgk="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style type='text/css'>body {background-color: #CCCCCC !important;}</style> <meta name="robots" content="follow" />
+<meta name="rating" content="general" />
+<meta name="referrer" content="no-referrer" />
+<meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
+<link rel="canonical" href="handbooks.html" />
+<link rel="shortlink" href="https://hhs.texas.gov/node/186" />
+<meta http-equiv="content-language" content="en_US" />
+<meta name="revisit-after" content="1 day" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta property="og:site_name" content="Texas Health and Human Services" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hhs.texas.gov/laws-regulations/handbooks" />
+<meta property="og:title" content="Handbooks" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://hhs.texas.gov/laws-regulations/handbooks" />
+<meta name="twitter:title" content="Handbooks" />
+<meta itemprop="name" content="Handbooks" />
+<meta name="dcterms.type" content="Text" />
+<meta name="dcterms.format" content="text/html" />
+<meta name="dcterms.identifier" content="https://hhs.texas.gov/laws-regulations/handbooks" />
+<link rel="shortcut icon" href="../sites/all/themes/custom/star/favicon.ico" type="image/vnd.microsoft.icon" />
+<title>Handbooks | Texas Health and Human Services</title>
+<!-- Call bootstrap.css before $scripts to resolve @import conflict with respond.js -->
+<link rel="stylesheet" href="../sites/all/themes/custom/star/vendor/bootstrap/css/bootstrap.min.css">
+
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css__nt4iN78X-67CSiQIYWVlzB_fqfhw2oHEaKP7zoEhYo.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_kBSJYuYYeoT_SlTEoWFULxcVMylBYBfH81DkZ9OBMgA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://hhs.texas.gov/sites/default/files/css/css_UTfaJ35w0G8zEKrQFjDGJa_UaNEs5mGU7INNbT0zEx4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_TctAUmx9X8wbR_uT-_A_XX7yhTMggKBqQZk7kCTwefI.css" media="all" />
+<link type="text/css" rel="stylesheet" href="../sites/default/files/css/css_AY0vAyslI2TIuGW_9FPFoNfWEVs9oLx1Btz1klwtXbc.css" media="all" />
+    <script type="text/javascript" src="../sites/default/files/js/js_2TLJopCNtX8XmvrzAyGdu-bdXMzazsK84vvYZMTjo8M.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.google_analytics_uacct = "UA-18019217-14";
+//--><!]]>
+</script>
+<script type="text/javascript" src="../sites/default/files/js/js_ExfzsYyKUCFc7z7xOGmfLC5TAIHLnKmC_hu4bRBz_0k.js"></script>
+<script type="text/javascript" src="../sites/default/files/js/js_VrlhRgs-ITK404_OOHL1jbduSo5hG0PSNt8kycdiLSo.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+document.createElement( "picture" );
+//--><!]]>
+</script>
+<script type="text/javascript" src="../sites/default/files/js/js_UnhwDefUjNfTOpWyBFQTjatCEqW6Ak5XUveISOC6jeI.js"></script>
+<script type="text/javascript" src="https://hhs.texas.gov/sites/default/files/js/js_4KWuNinVR7vjHpSHxZWNr2Jefc2IS6FyBfkMMNZeypY.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-18019217-14", {"cookieDomain":"auto"});ga("require", "linkid", "linkid.js");ga("require", "displayfeatures");ga("set", "anonymizeIp", true);ga("set", "page", location.pathname + location.search + location.hash);ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="../sites/default/files/js/js_3IVWHlmJzTk2gaOpXjx7p4aSghjU-NxIDKIkoT0eyEE.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"star","theme_token":"ZrLAPREAK61rD4ZVDb3SyrKBCNEVPrvtGti0R0Mt0ig","js":{"sites\/all\/modules\/contrib\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/contrib\/picture\/picture.min.js":1,"sites\/all\/modules\/contrib\/extlink_extra\/extlink_extra.js":1,"sites\/all\/themes\/custom\/star\/js\/theme.js":1,"sites\/all\/themes\/custom\/star\/js\/theme.init.js":1,"sites\/all\/themes\/custom\/star\/js\/views\/view.home.js":1,"public:\/\/google_tag\/language\/google_tag.en.script.js":1,"0":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.core.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.widget.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.accordion.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.tabs.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.button.js":1,"1":1,"sites\/all\/modules\/contrib\/jquery_ui_filter\/jquery_ui_filter.js":1,"sites\/all\/modules\/contrib\/ckeditor_accordion\/js\/ckeditor-accordion.js":1,"sites\/all\/modules\/contrib\/extlink\/extlink.js":1,"sites\/all\/modules\/contrib\/jquery_ui_filter\/accordion\/jquery_ui_filter_accordion.js":1,"sites\/all\/modules\/contrib\/jquery_ui_filter\/tabs\/jquery_ui_filter_tabs.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/all\/themes\/custom\/star\/vendor\/modernizr\/modernizr.min.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jquery.appear\/jquery.appear.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jquery.easing\/jquery.easing.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jquery-cookie\/jquery-cookie.js":1,"sites\/all\/themes\/custom\/star\/vendor\/bootstrap\/js\/bootstrap.min.js":1,"sites\/all\/themes\/custom\/star\/vendor\/common\/common.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jquery.validation\/jquery.validation.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jquery.stellar\/jquery.stellar.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jquery.easy-pie-chart\/jquery.easy-pie-chart.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jquery.gmap\/jquery.gmap.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jquery.lazyload\/jquery.lazyload.js":1,"sites\/all\/themes\/custom\/star\/vendor\/isotope\/jquery.isotope.min.js":1,"sites\/all\/themes\/custom\/star\/vendor\/owl.carousel\/owl.carousel.js":1,"sites\/all\/themes\/custom\/star\/vendor\/jflickrfeed\/jflickrfeed.js":1,"sites\/all\/themes\/custom\/star\/vendor\/magnific-popup\/jquery.magnific-popup.js":1,"sites\/all\/themes\/custom\/star\/vendor\/vide\/vide.js":1,"sites\/all\/themes\/custom\/star\/vendor\/circle-flip-slideshow\/js\/jquery.flipshow.js":1,"sites\/all\/themes\/custom\/star\/js\/custom.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"misc\/ui\/jquery.ui.tabs.css":1,"misc\/ui\/jquery.ui.button.css":1,"modules\/book\/book.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"sites\/all\/modules\/contrib\/ckeditor_accordion\/css\/ckeditor-accordion.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/picture\/picture_wysiwyg.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/extlink\/extlink.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/custom\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/extlink_extra\/extlink_extra.508.css":1,"sites\/all\/modules\/contrib\/navbar_extras\/modules\/navbar_shiny\/css\/navbar_shiny.css":1,"sites\/all\/themes\/custom\/star\/vendor\/owl.carousel\/assets\/owl.carousel.css":1,"sites\/all\/themes\/custom\/star\/vendor\/font-awesome\/css\/font-awesome-legacy.css":1,"sites\/all\/themes\/custom\/star\/vendor\/font-awesome\/css\/font-awesome.css":1,"sites\/all\/themes\/custom\/star\/vendor\/simple-line-icons\/css\/simple-line-icons.css":1,"sites\/all\/themes\/custom\/star\/vendor\/owl.carousel\/assets\/owl.theme.default.css":1,"sites\/all\/themes\/custom\/star\/vendor\/prettyPhoto\/css\/prettyPhoto.css":1,"sites\/all\/themes\/custom\/star\/vendor\/circle-flip-slideshow\/css\/component.css":1,"sites\/all\/themes\/custom\/star\/vendor\/magnific-popup\/magnific-popup.css":1,"sites\/all\/themes\/custom\/star\/vendor\/isotope\/jquery.isotope.css":1,"sites\/all\/themes\/custom\/star\/css\/theme.css":1,"sites\/all\/themes\/custom\/star\/css\/theme-elements.css":1,"sites\/all\/themes\/custom\/star\/css\/theme-animate.css":1,"sites\/all\/themes\/custom\/star\/css\/theme-blog.css":1,"sites\/all\/themes\/custom\/star\/css\/theme-shop.css":1,"sites\/all\/themes\/custom\/star\/css\/drupal-styles.css":1,"sites\/all\/themes\/custom\/star\/stylesheets\/style.css":1,"sites\/all\/themes\/custom\/star\/css\/custom.css":1,"sites\/all\/themes\/custom\/star\/css\/skins\/default.css":1}},"jQueryUiFilter":{"disabled":0,"accordionHeaderTag":"h3","accordionOptions":{"active":"false","animated":"slide","autoHeight":"false","clearStyle":"false","collapsible":"true","event":"click","scrollTo":0,"history":"true"},"tabsOptions":{"collapsible":"false","event":"click","fx":0,"paging":{"back":"\u0026laquo; Previous","next":"Next \u0026raquo;"},"selected":"","scrollTo":0,"history":"false"},"tabsHeaderTag":"h3"},"urlIsAjaxTrusted":{"\/site-search":true},"extlink":{"extTarget":"_blank","extClass":"ext","extLabel":"(link is external)","extImgClass":0,"extIconPlacement":"append","extSubdomains":0,"extExclude":"hhs\\.texas\\.gov","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":{"value":"  \u003Ch2\u003EYou are leaving the  [site:name] website\u003C\/h2\u003E\r\n  \u003Cp\u003EYou are being directed to a third-party website:\u003C\/p\u003E\r\n  \u003Cp\u003E\u003Cstrong\u003E[extlink:external-url]\u003C\/strong\u003E\u003C\/p\u003E\r\n  \u003Cp\u003EThis link is provided for your convenience. Please note that this third-party website is not controlled by [site:name] or subject to our privacy policy.\u003C\/p\u003E\r\n  \u003Cp\u003EThank you for visiting our site. We hope your visit was informative and enjoyable.\u003C\/p\u003E\r\n\r\n  \u003Cdiv class=\u0022extlink-extra-actions\u0022\u003E\r\n      \u003Cdiv class=\u0022extlink-extra-back-action\u0022\u003E\u003Ca title=\u0022Cancel\u0022 href=\u0022[extlink:back-url]\u0022\u003ECancel\u003C\/a\u003E\u003C\/div\u003E\r\n      \u003Cdiv class=\u0022extlink-extra-go-action\u0022\u003E\u003Ca class=\u0022ext-override\u0022 title=\u0022Go to link\u0022 href=\u0022[extlink:external-url]\u0022\u003EGo to link\u003C\/a\u003E\u003C\/div\u003E\r\n  \u003C\/div\u003E\r\n  \u003Cbr\/\u003E\u003Cbr\/\u003E\r\n  [extlink:timer]\r\n  ","format":"full_html"},"mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"extlink_extra":{"extlink_alert_type":"","extlink_alert_timer":"0","extlink_alert_url":"\/now-leaving","extlink_cache_fix":0,"extlink_exclude_warning":"","extlink_508_fix":1,"extlink_508_text":" [external link, opens in new window]","extlink_url_override":0,"extlink_url_params":{"external_url":null,"back_url":null}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackUrlFragments":1},"currentPath":"node\/186","currentPathIsAdmin":false});
+//--><!]]>
+</script>
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]>
+<![endif]-->
+
+<!--[if IE]>
+  <link rel="stylesheet" href="../sites/all/themes/custom/star/css/ie.css">
+<![endif]-->
+
+<!--[if lte IE 8]>
+  <script src="https://hhs.texas.gov/sites/all/themes/custom/star/vendor/respond.js"></script>
+<![endif]-->
+
+<!-- Web Fonts  -->
+
+<!-- User defined CSS --><style type='text/css'>/* News Releases */
+.view-news-releases h1.news-release {font:bold 18px "Myriad Set Pro","Helvetica Neue",Helvetica,Arial,sans-serif}
+.view-news-releases .news-content {color:#030303;font-weight:normal}
+
+/* Reports/Presentations search filter box */
+.description {font-size: .8em;}
+
+/* screenreader hidden text *
+.sr-only {
+position: absolute;
+ height: 1px;
+ width: 1px;
+ clip: rect(1px 1px 1px 1px); // IE 6 and 7
+ clip: rect(1px,1px,1px,1px);
+ clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+ -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+ overflow: hidden !important;
+}
+
+
+/* EVENTS WEBCAST ICON */
+#block-views-calendar-block-5 .view-display-id-block_5  .fa-video-camera, #block-views-calendar-block-9 .view-display-id-block_9 .fa-video-camera {
+    color: #666;
+    background: #efefef;
+    padding: 10px;
+    border: 1px solid #ccc;
+    float: left;
+    margin: 7px 5px 5px 0;
+}
+
+/* Events Cancelled */
+span.cancelled {
+    color: #e00000;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #fff3e0;
+   padding: 5px;
+}
+
+/* Archived Events */
+.archived-events .pull-right {float:none !important}
+.archived-events .pagination {margin:0}
+.archived-events .pagination-lg > li > a, .archived-events .pagination-lg > li > span {font-size:14px;padding:5px}
+
+/* SB20 */
+/* make really long fifth th text small */
+th:nth-child(5) {font-size: small;}
+
+@media (min-width: 1200px) {
+form#views-exposed-form-contracts-for-sb20-page .views-widget-filter-field_effective_date_value, form#views-exposed-form-contracts-for-sb20-page  .views-widget-filter-field_expiration_date_value {width: 15%;}
+}
+
+@media (max-width: 991px) {
+form#views-exposed-form-contracts-for-sb20-page .views-exposed-widget {width: 100%;}
+}
+/* make filter title smaller */
+#block-views-exp-contracts-for-sb20-page h2 {font-size: 1.5em; margin-bottom: 0;}
+
+/* Additional Right Sidebar Styles */
+.calloutGreen2 {background:#6cc04a;background:-moz-linear-gradient(135deg, #2989d8 0%, #6cc04a 100%) repeat scroll 0 0;background:-webkit-linear-gradient(135deg, #2989d8 0%, #6cc04a 100%) repeat scroll 0 0;background:transparent linear-gradient(135deg, #2989d8 0%, #6cc04a 100%) repeat scroll 0 0;padding:1em;color:#fff;margin:1em 0}
+
+.calloutGray {background:#48484f;background:-moz-linear-gradient(-45deg, #48484f 0%, #959ca0 100%) repeat scroll 0 0;background:-webkit-linear-gradient(-45deg, #48484f 0%,#959ca0 100%) repeat scroll 0 0;background:linear-gradient(135deg, #48484f 0%,#959ca0 100%) repeat scroll 0 0;padding:1em;color:#fff;margin:1em 0}
+
+.region-sidebar-right .contact h4::before {content: "\f1d8 \00a0";font-family:fontawesome}
+.region-sidebar-right .resources h4::before {content: "\f0c1 \00a0";font-family:fontawesome}
+.region-sidebar-right .video h4::before {content: "\f144 \00a0";font-family:fontawesome}
+.region-sidebar-right .contact h4 {background:#003087;background:-moz-linear-gradient(135deg, #003087 0%, #2989d8 60%, #6cc04a 100%) repeat scroll 0 0;background:-webkit-linear-gradient(135deg, #003087 0%, #2989d8 60%, #6cc04a 100%) repeat scroll 0 0;background:linear-gradient(135deg, #003087 0%, #2989d8 60%, #6cc04a 100%) repeat scroll 0 0;padding:.5em;color:#fff}
+.region-sidebar-right .resources h4 {background:#016d77;background:-moz-linear-gradient(45deg, #016d77 0%, #00a19b 60%, #6cc04a 100%) repeat scroll 0 0;background:-webkit-linear-gradient(45deg, #016d77 0%, #00a19b 60%, #6cc04a 100%) repeat scroll 0 0;background:linear-gradient(45deg, #016d77 0%, #00a19b 60%, #6cc04a 100%) repeat scroll 0 0;padding:.5em;color:#fff}
+.region-sidebar-right .video h4 {background:#6a1b32;background:-moz-linear-gradient(135deg, #ab2328 0%, #6a1b32 60%, #ff3a1e 100%) repeat scroll 0 0;background:-webkit-linear-gradient(135deg, #ab2328 0%, #6a1b32 60%, #ff3a1e 100%) repeat scroll 0 0;background:linear-gradient(135deg, #ab2328 0%, #6a1b32 35%, #ff3a1e 100%) repeat scroll 0 0;padding:.5em;color:#fff}
+
+.ctaButton span.ext, .ctaButtonL span.ext {width:0;height:0}
+.ctaBlue a:focus, .ctaBlue a:hover, .calloutBlue a:focus, .calloutBlue a:hover, .calloutRed a:focus, .calloutRed a:hover {color:#fff;text-decoration:none}
+.content .playButton, .content .playButton:focus, .content .playButton:hover, .content .blueButton, .content .blueButton:focus, .content .blueButton:hover {color:#fff;background-color:#22599c}
+#views-exposed-form-reports-and-presentations-page-1 #edit-field-category-tid {width:100%}
+.calloutRed2 {color:#fff;margin:1em 0;padding:1em;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff3a1e+0,ab2328+50,c4451f+51,890900+100 */
+background: #ff3a1e; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #ff3a1e 0%, #ab2328 50%, #c4451f 71%, #890900 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #ff3a1e 0%,#ab2328 50%,#c4451f 71%,#890900 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #ff3a1e 0%,#ab2328 50%,#c4451f 71%,#890900 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3a1e', endColorstr='#890900',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
+.calloutRed2 p, .calloutRed2 h2, .calloutRed2 h4, .calloutGray p, .calloutGray h2, .calloutGray h4 {color:#fff}
+p {line-height: 23px;}
+.node-type-book table th a {color:#fff;text-decoration:underline}
+
+.region-sidebar-right .ui-accordion ul {font-size:90%;padding:0}
+
+.pquote {  display: block; float: right; padding: 0 0 0 10px; margin: 0 0 10px 10px; font-size: 1.2em; line-height: 1em; font-style: italic; text-align: right;  width: 275px; }
+
+/* Responsive Video Wrapper */
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.col-md-9 .videoWrapper {padding-bottom: 39.25%}
+.col-md-9 .videoWrapper iframe {width:75%}
+.videoWrapperSm {
+	position: relative;
+	padding-bottom: 26.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapperSm iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+@media only screen and (max-width:965px) {
+  .videoWrapperSm {padding-bottom: 56.25%; /* 16:9 */}
+}</style><!-- End user defined CSS --><link rel="apple-touch-icon" sizes="180x180" href="../sites/all/themes/custom/star/img/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="manifest" href="../manifest.json">
+<link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-186 node-type-page i18n-en boxed"  data-target="#header" data-spy="scroll" data-offset="100">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TBHRBHX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- .body -->
+<div class="body">
+          <!-- #top-bar-wrapper .clearfix v-->
+     <div id="top-bar-wrapper" class="clearfix">
+          <!-- #top-bar .clearfix -->
+          <div id="top-bar" class="clearfix">
+                 <div class="region region-top-bar">
+    <div id="block-block-52" class="block block-block">
+
+    
+  <div class="content">
+    <ul id="quick-links">
+	<li><a href="../a-z-directory.html">A-Z Index</a></li>
+	<li><a href="../about-hhs/communications-events/social-media.html">Connect</a></li>
+	<li><a href="../es.html">Español</a></li>
+	<li><a href="https://service.govdelivery.com/service/multi_subscribe.html?code=TXHHSC">Subscribe</a></li>
+	<li><a href="http://www.surveygizmo.com/s3/3000796/Texas-Health-and-Human-Services-Website-Survey">Survey</a></li>
+	<!--<li><a href="../es/quienes-somos/donde-encontrarnos.html">Contact</a></li>-->
+</ul>
+  </div>
+</div>
+  </div>
+          </div>
+          <!--/ #top-bar .clearfix -->
+     </div>
+     <!--/ #top-bar-wrapper .clearfix -->
+          <header id="header" data-plugin-options='{"stickyEnabled": false, "stickyEnableOnBoxed": false, "stickyEnableOnMobile": false, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": false}'>
+          <div class="header-body">
+               <div class="header-container container">
+               <div id="skip-link"><a href="handbooks.html#main-content" class="element-invisible element-focusable">Skip to main content</a></div>
+                    <div class="header-row">
+
+
+                         <div class="header-column">
+
+                                                                                          
+                                                            <div class="header-logo">
+                                   <a href="../index.html" title="Home" rel="home" id="logo">
+					        <img src="../sites/all/themes/custom/star/logo.png" alt="Home" height="94" data-sticky-height="51" data-sticky-top="33" />
+					      </a>
+
+
+                              </div>
+                              
+                                                            <div id="name-and-slogan"  class="hidden">
+
+                                                                                                         <div id="site-name"  class="hidden">
+                                        <a href="../index.html" title="Home" rel="home"><span>Texas Health and Human Services</span></a>
+                                   </div>
+                                                                      
+                                   
+                              </div>
+                              <!-- /#name-and-slogan -->
+                              
+                         </div>
+
+
+                         <div class="header-column header-column-valign-top">
+
+                                                            <div class="header-search hidden-xs">
+                                     <div class="search-wrapper">
+<form action="/site-search" method="get" id="views-exposed-form-search-english-page" accept-charset="UTF-8"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext">
+                  <label for="edit-search-api-views-fulltext">
+            Search          </label>
+                        <div class="views-widget">
+          <div class="form-item form-type-textfield form-item-search-api-views-fulltext">
+ <input placeholder="Keyword search" type="text" id="edit-search-api-views-fulltext" name="search_api_views_fulltext" value="" size="30" maxlength="128" class="form-text" />
+</div>
+        </div>
+              </div>
+                    <div class="views-exposed-widget views-submit-button">
+      <input type="submit" id="edit-submit-search-english" name="" value="Apply" class="btn-primary btn form-submit" />    </div>
+      </div>
+</div>
+</div></form></div>                              </div>
+                              
+                                                                </div>
+                         </div>
+
+
+               </div>
+
+               <div class="header-container container header-nav header-nav-push-top">
+
+                    <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
+					<i class="fa fa-bars"></i>
+				</button>
+
+
+
+                    
+                    <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
+                         <nav class="nav-main">
+                                
+<ul class="nav nav-pills nav-main" id="mainMenu"><li class="dropdown 3055"><a href="../about-hhs.html" title="About HHS" class="dropdown-toggle disabled">About HHS</a><ul class="dropdown-menu"><li><a href="../about-hhs/agencies-departments.html" title="Agencies &amp; Departments">Agencies &amp; Departments</a></li><li><a href="../about-hhs/budget-planning.html" title="Budget &amp; Planning">Budget &amp; Planning</a></li><li><a href="../about-hhs/communications-events.html" title="Communication and Events">Communications &amp; Events</a></li><li><a href="../about-hhs/community-engagement.html">Community Engagement</a></li><li><a href="../about-hhs/find-us.html" title="Find Us">Find Us</a></li><li><a href="../about-hhs/jobs-hhs.html" title="Jobs at HHS">Jobs at HHS</a></li><li><a href="../about-hhs/leadership.html" title="Leadership">Leadership</a></li><li><a href="../about-hhs/process-improvement.html">Process Improvement</a></li><li><a href="../about-hhs/records-statistics.html" title="Records and Statistics">Records and Statistics</a></li><li><a href="../about-hhs/hhs-transformation.html" title="Transformation">Transformation</a></li><li><a href="../about-hhs/your-rights.html" title="Your Rights">Your Rights</a></li></ul></li><li class="dropdown 122146"><a href="../hhs-services.html" title="Services" class="dropdown-toggle disabled">Services</a><ul class="dropdown-menu"><li><a href="../services/aging.html">Aging</a></li><li><a href="../services/disability.html">Disability</a></li><li><a href="../services/financial.html">Financial</a></li><li><a href="../services/health.html">Health</a></li><li><a href="../services/mental-health-substance-use.html" class="menu-node-unpublished menu-node-unpublished">Mental Health &amp; Substance Use</a></li><li><a href="../services/questions-about-your-benefits.html">Questions About Your Benefits</a></li><li><a href="../services/safety.html">Safety</a></li><li><a href="../services/service-coordination.html">Service Coordination</a></li></ul></li><li class="dropdown 3426"><a href="../doing-business-hhs.html" title="Doing Business with HHS" class="dropdown-toggle disabled">Doing Business with HHS</a><ul class="dropdown-menu"><li><a href="../doing-business-hhs/business-contracting-opportunities.html" title="Business and Contracting Opportunities">Business and Contracting Opportunities</a></li><li><a href="../doing-business-hhs/contracts-100000-more.html">Contracts of $100,000 and More</a></li><li><a href="../doing-business-hhs/grants.html" title="Grants">Grants</a></li><li><a href="../doing-business-hhs/historically-underutilized-business-opportunities-program.html">HUB Program</a></li><li><a href="http://www.dshs.texas.gov/immunize/" title="Immunizations and Vaccines">Immunizations and Vaccines</a></li><li><a href="../doing-business-hhs/licensing-credentialing-regulation.html" title="Licensing and Regulations">Licensing, Credentialing and Regulation</a></li><li><a href="../doing-business-hhs/provider-portals.html">Provider Portals</a></li><li><a href="../doing-business-hhs/provider-self-reporting.html">Provider Self-reporting</a></li><li><a href="../doing-business-hhs/training.html">Training</a></li><li><a href="../doing-business-hhs/vendor-contractor-information.html">Vendor &amp; Contractor Information</a></li></ul></li><li class="dropdown 8032 active"><a href="../laws-regulations.html" title="Laws and Regulations" class="active-trail dropdown-toggle disabled">Laws &amp; Regulations</a><ul class="dropdown-menu"><li><a href="forms.html">Forms</a></li><li class="active"><a href="handbooks.html" class="active-trail active">Handbooks</a></li><li><a href="legal-information.html">Legal Information</a></li><li><a href="policies-rules.html">Policies and Rules</a></li><li><a href="reports-presentations.html" class="menu-node-unpublished menu-node-unpublished">Reports &amp; Presentations</a></li></ul></li><li><a href="../about-hhs/find-us.html" title="">Contact</a></li></ul>                         </nav>
+                    </div>
+               </div>
+
+          </div>
+     </header>
+     <!-- end header -->
+
+     <div role="main" class="main">
+          			<!-- .page-title breadcrumb-wrap -->
+			<section class="page-title breadcrumb-wrap">
+				<!-- .page-title-inner -->
+				<div class="page-title-inner">
+					<!-- .container -->
+					<div class="container">
+						<!-- .row -->
+						<div class="row">
+							<div class="col-md-12">
+								<h1>Handbooks</h1>
+							</div>
+						</div>
+						<!--/ .row -->
+					</div>
+					<!--/ .container -->
+				</div>
+				<!--/ .page-title-inner -->
+
+				<!-- .breadcrumbs-container .theme-color -->
+				<div class="breadcrumbs-container theme-color">
+										<!-- .container -->
+					<div class="container">
+						<!-- .row start -->
+						<div class="row">
+							<!-- .col-md-12 start -->
+							<div class="col-md-12">
+								<h2 class="element-invisible">You are here</h2><div class="breadcrumb"><span class="inline odd first"><a href="../index.html">Home</a></span> <span class="delimiter">></span> <span class="inline even"><a href="../laws-regulations.html">Laws &amp; Regulations</a></span> <span class="delimiter">></span> <span class="inline odd last">Handbooks</span></div>							</div>
+							<!-- .col-md-12 end -->
+						</div>
+						<!-- .row end -->
+					</div>
+					<!--/ .container -->
+									</div>
+				<!--/ .breadcrumbs-container .theme-color -->
+
+			</section>
+			<!--/ .page-title breadcrumb-wrap -->
+                    <!--/ end surgery -->
+
+          		<!-- #content .content .full -->
+          <div id="content" class="content full">
+			<!-- .container -->
+               <div class="container">
+                    <!-- .row -->
+                    <div class="row">
+
+                         <div class="col-md-12">
+                                                       </div>
+
+                                                  <aside id="sidebar-left">
+                              <div class="col-md-3 ">
+                                   <div id="sticky-sidebar">
+                                          <div class="region region-sidebar-left">
+    
+<div id="block-menu-menu-laws-regulations" class="block block-menu">
+
+    <h4>Laws & Regulations</h4>
+  
+  <div class="content">
+    <ul class="menu"><li class="first collapsed"><a href="forms.html" title="">Forms</a></li>
+<li class="expanded active-trail"><a href="handbooks.html" title="" class="active-trail active">Handbooks</a><ul class="menu"><li class="first last leaf"><a href="https://www.dfps.state.tx.us/handbooks/" title="">DFPS Handbooks</a></li>
+</ul></li>
+<li class="collapsed"><a href="legal-information.html" title="">Legal Information</a></li>
+<li class="collapsed"><a href="policies-rules.html" title="">Policies and Rules</a></li>
+<li class="last leaf"><a href="reports-presentations.html" title="" class="menu-node-unpublished menu-node-unpublished">Reports &amp; Presentations</a></li>
+</ul>  </div>
+</div>
+  </div>
+                                   </div>
+                              </div>
+                         </aside>
+                         
+                         <div class="col-md-9 ">
+
+                                                            <!--/ -->
+                              
+                              						<!-- start var=pre_content -->
+												<!--/ end var=pre_content -->
+            <!--PAGEWATCH--> 
+                           <!-- hi mom -->
+                          <div id="main-content">
+                           
+                               <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-186" class="node node-page en clearfix" about="/laws-regulations/handbooks" typeof="foaf:Document">
+
+  
+      <span property="dc:title" content="Handbooks" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    
+  <div class="field-body">
+    <p>HHS has more than 50 handbooks, which outline the rules employees and contracted providers are held accountable for when providing services to eligible Texans. We provide these for all Texans to view as part of our effort to be transparent in service delivery.</p>
+
+<h2>Assistive Services Providers</h2>
+
+<ul>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/assistive-technology-trainer-guidelines-procedures">Assistive Technology Trainer Guidelines and Procedures</a> is used to prepare people who are blind to effectively use assistive technology in employment or in educational settings after high school.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/board-evaluation-interpreters">Board for Evaluation of Interpreters (BEI) Handbook</a> outlines the general operations and procedures of the BEI general interpreter certification program and provides guidance for both current and prospective BEI-certified interpreters for people who are deaf and hard of hearing in Texas.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/comprehensive-rehabilitation-services-crs-policy-manual">Comprehensive Rehabilitation Services Policy Manual</a> is designed as a framework for counselors in making decisions and delivering quality services to eligible consumers.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/comprehensive-rehabilitation-services-crs-standards-providers">Comprehensive Rehabilitation Services (CRS) Standards for Providers Manual</a> is the official reference document of provider requirements for contracted goods and services for the CRS program.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/independent-living-services-standards-providers">Independent Living Services Standards for Providers</a>&nbsp;describes steps for providing the services that help consumers live more independently.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/office-deaf-hard-hearing-services-manual">Office of Deaf and Hard of Hearing Services Manual</a> outlines procedures for the Deaf and Hard of Hearing program.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/standards-manual-consumer-services-contract-providers">Standards Manual for Consumer Services Contract Providers</a> outlines procurement standards established by the Division for Blind Services.</li>
+</ul>
+
+<h2>Contracting and Procurement</h2>
+
+<ul>
+	<li>The <a href="https://hhs.texas.gov/sites/default/files/documents/laws-regulations/handbooks/contract-manual.pdf">HHS Contract Management Handbook (PDF)</a> establishes consistent contract management policies and procedures that must be followed by HHS agencies.</li>
+	<li>The <a href="https://hhs.texas.gov/sites/default/files/documents/laws-regulations/handbooks/procurement-manual.pdf">HHS Procurement Manual (PDF)</a> serves as a purchasing guide for HHS agencies and establishes requirements for interface between the Procurement and Contracting Services Division of and HHS agencies for purchases conducted by PCS on behalf of the agencies.</li>
+</ul>
+
+<h2>Fair Hearings and Fraud</h2>
+
+<ul>
+	<li><a href="https://hhs.texas.gov/laws-regulations/handbooks/fair-fraud-hearings-handbook">Fair and Fraud Hearings Handbook</a> includes policies, procedures, and responsibilities for handling client and contract appeals, detecting and handling potential fraud cases, and protecting the civil rights of clients.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/security-accountability-handbook">Security and Accountability Handbook</a> contains procedures for safeguarding program benefits from fraud, abuse, and misuse.</li>
+</ul>
+
+<h2>Guardianship Handbooks</h2>
+
+<ul>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/guardianship-provider-handbook">Guardianship Provider Handbook</a> contains procedures relating to referrals, billing and payment, and contract monitoring for guardianship providers.</li>
+</ul>
+
+<h2>Long-term Care Community-based Programs</h2>
+
+<ul>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/case-worker-community-care-aged-disabled-handbook">Case Worker Community Care for Aged and Disabled Handbook</a> contains eligibility criteria, policy and procedures for agency programs. HHSC provides an array of services and community supports that enable people who are elderly or who have disabilities to avoid institutionalization.</li>
+	<li>The Case Manager In-Home and Family Support Program Handbook has been removed as the In-Home and Family Support program was not funded during the 85th Texas legislative session.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/consumer-directed-services-handbook">Consumer Directed Services Handbook</a> includes rules and procedures for consumers, employers, Consumer Directed Service Agency (CDSA) staff, case managers, contract managers, staff and other interested parties.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/consumer-managed-personal-attendant-services-provider-manual">Consumer Managed Personal Attendant Services Provider Manual</a> provides information to licensed agencies under contract to provide personal assistance services to individuals who have physical disabilities and who are able to supervise an attendant or have someone who can supervise the attendant for them.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/contracting-provide-assisted-living-residential-care-services">Contracting to Provide Assisted Living and Residential Care Services Handbook</a> contains rules for administering the Residential Care Program. It is incorporated by reference as a part of the program contract.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/contracting-provide-primary-home-care-services">Contracting to Provide Primary Home Care Services Handbook</a> contains rules for provider agencies contracting to provide Community Care for the Aged and Disabled Primary Home Care services.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/contracting-provide-special-services-persons-disabilities">Contracting to Provide Special Services to Persons with Disabilities (SSPD) Handbook</a> contains rules for adult day care facilities and other provider agencies contracting to provide SSPD and SSPD 24-hour shared attendant care.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/day-activity-and-health-services-provider-manual">Day Activity and Health Services (DAHS) Provider Manual</a> contains rules and procedures for administering the DAHS Program. It is incorporated by reference as a part of the DAHS contract.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/emergency-response-services-provider-manual">Emergency Response Services (ERS) Provider Manual</a> contains rules and procedures for administering the ERS Program. It is incorporated by reference as a part of the ERS contract.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/home-delivered-meals-provider-manual">Home-Delivered Meals Provider Manual</a> applies to provider agencies that receive Title XX and/or Title XIX funding and to the Title XX/Title XIX funded portion of a common provider. This document replaces the Contracting to Provide Home-Delivered Meals Handbook.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/local-intellectual-developmental-disability-authority-handbook">Local Intellectual and Developmental Disability Authority Handbook</a> includes forms and publications for use by LA staff.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/medicaid-hospice-provider-manual">Medicaid Hospice Provider Manual</a> contains policy that providers must follow when administering the program and meeting the needs of hospice recipients.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/texas-medicaid-hospice-program-standards-handbook">Medicaid Hospice Program Standards Handbook</a> contains rules providers must follow when administrating the program and meeting the needs of hospice recipients.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/transition-assistance-services-orientation-handbook">Transition Assistance Services Orientation Handbook</a> outlines the delivery of transition assistance services.</li>
+</ul>
+
+<h2>Long-term Care Facility-based Programs</h2>
+
+<ul>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/assisted-living-handbook">Assisted Living Handbook</a> contains forms that facilities use to coordinate services. Only forms are included in the handbook.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/day-activity-health-services-requirements">Day Activity and Health Services Requirements Handbook</a> contains rules for facilities that contract to provide day activity and health services.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/denial-or-refusal-license-handbook">Denial or Refusal of License (DRL)</a> contains rules that govern criminal convictions that may bar licensure for nursing facilities, assisted living facilities, adult day care facilities, intermediate care facilities for persons with intellectual disability, and home and community support services agencies (HCSSAs).</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/employee-misconduct-registry-handbook">Employee Misconduct Registry Handbook</a> contains rules relating to findings of abuse, neglect or exploitation of residents and misappropriation of residents' property by unlicensed direct care employees in HHSC-regulated long-term care facilities.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/licensed-intermediate-care-facility-individuals-intellectual-disability-or-related-conditions-icfiid">Licensed Intermediate Care Facility for Individuals with an Intellectual Disability or Related Conditions (ICF/IID) Provider Manual</a> is a guide for providers contracting with HHSC to provide 24-hour residential care and treatment services to individuals who have a diagnosis of an intellectual disability or a related condition.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/licensing-standards-assisted-living-facilities-handbook">Licensing Standards for Assisted Living Facilities Handbook</a> contains minimum standards a facility must meet in order to be licensed as an assisted living facility. The standards serve as a basis for licensure survey activities.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/licensing-standards-home-community-support-services-agencies-handbook">Licensing Standards for Home and Community Support Services Agencies Handbook</a> outlines the minimum standards that a person must meet in order to be licensed as a home and community support services agency.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/licensing-standards-intermediate-care-facilities-individuals-intellectual-disability-or-related">Licensing Standards for Intermediate Care Facilities for Individuals with an Intellectual Disability or Related Conditions (ICFs/IID) Handbook</a> outlines the development, establishment, and enforcement of service standards for individuals residing in intermediate care facilities for an individual with an intellectual disability or a related condition.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/licensing-standards-medication-aides-handbook">Licensing Standards for Medication Aides Handbook</a> contains rules for administering medications to residents in long-term care facilities.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/licensing-standards-prescribed-pediatric-extended-care-centers-handbook">Licensing Standards for Prescribed Pediatric Extended Care Centers Handbook</a> contains rules for the licensing and regulation of prescribed pediatric extended care centers (PPECCs) in Texas. A PPECC provides services to individuals younger than age 21 who are medically and technologically dependent.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/nursing-facility-administrators-handbook">Nursing Facility Administrators Handbook</a> contains licensure rules for administrators of nursing care facilities.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/nursing-facility-provider-manual">Nursing Facility Provider Manual</a> provides basic information to nursing facilities certified to provide services to Medicaid recipients.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/nursing-facility-requirements-licensure-medicaid-certification-handbook">Nursing Facility Requirements for Licensure and Medicaid Certification Handbook</a> specifies federal and state requirements governing licensed nursing facilities and the Medicaid Nursing Facilities program, administered by HHSC in cooperation with other federal and state agencies.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/person-directed-planning-state-supported-living-centers">Person-Directed Planning for State Supported Living Centers Handbook</a> contains forms, instructions and appendixes applicable to the person-directed process used in state supported living centers in Texas.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/quality-monitoring-program-provider-manual">Quality Monitoring Program Provider Manual</a> includes information about the Quality Monitoring Program, nursing facility quality review process and early warning system.</li>
+	<li>The<a href="https://hhs.texas.gov/laws-regulations/handbooks/texas-standards-nurse-aide-registry-training-handbook"> Texas Standards for Nurse Aide Registry and Training Handbook</a> contains information relating to the training and competency evaluation of nurse aides employed in skilled nursing facilities (Medicare) or nursing facilities (Medicaid) and the registry of nurse aides.</li>
+</ul>
+
+<h2>Long-term Care Waiver Programs</h2>
+
+<ul>
+	<li>The Case Manager Medically Dependent Children Program Handbook has been removed. Effective Nov. 1, 2016, the handbook is no longer operative.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/community-living-assistance-support-services-provider-manual">Community Living Assistance and Support Services (CLASS) Provider Manual</a> contains rules and procedures for administering the CLASS Program. It is incorporated by reference as a part of the CLASS contract.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/deaf-blind-multiple-disabilities-dbmd-program-manual">Deaf Blind with Multiple Disabilities (DBMD) Program Manual</a> is a guide for provider agencies contracting with HHSC to serve individuals who are deaf-blind with multiple disabilities. The manual includes policy, forms, resources and links to related Internet sites.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/home-community-based-services-handbook">Home and Community-based Services (HCS) Handbook</a> describes the responsibilities of the local authority service coordinator and the HCS provider and explains survey processes for local authorities and HCS providers.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/home-community-based-services-hcs-program-billing-guidelines">Home and Community-based Service Program Billing Guidelines</a> instruct providers on how to properly prepare and submit service claims.</li>
+	<li>The Medically Dependent Children Program Provider Manual has been removed. Effective Nov. 1, 2016, the handbook is no longer operative.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/texas-home-living-txhml-program">Texas Home Living Program Handbook</a> contains rules for the program, which provides essential services and supports so that Texans with intellectual disabilities can continue to live with their families or in their own homes in the community.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/texas-home-living-txhml-program-billing-guidelines">Texas Home Living Program Billing Guidelines</a> contain billing procedures for various services, including dental treatment, adaptive aids and minor home modifications.</li>
+</ul>
+
+<h2>Medical and Social Services Handbooks</h2>
+
+<ul>
+	<li>The <a href="https://hhs.texas.gov/sites/default/files/documents/laws-regulations/handbooks/Breast-and-Cervical-Cancer-Services-Policy-and-Procedure-Manual.pdf">Breast and Cervical Cancer Services Policy and Procedure Manual</a> contains standards and policies for eligibility, screening, case management, education, client documentation, reimbursement and evaluation.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/federal-assistance-individuals-households-program-other-needs-assistance-handbook" target="_blank">Federal Assistance to Individuals and Households - Other Needs Assistance Handbook</a> describes the policies, organization, and procedures for implementing the Other Needs Assistance provision of the Federal Assistance to Individuals and Households Program (IHP), the financial assistance program that responds to people whose needs result from natural or man-made disasters.</li>
+	<li>The Long-term Care <a href="https://hhs.texas.gov/laws-regulations/handbooks/medicaid-elderly-people-disabilities-handbook">Medicaid for the Elderly and People with Disabilities Handbook</a> contains policy and procedures for the Medicaid programs for people who are elderly and people with disabilities.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/star-kids-handbook">STAR Kids Handbook</a> contains approved policies, procedures and guidance for managed care organizations and staff operating the STAR Kids program.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/starplus-handbook" title="http://www.dads.state.tx.us/handbooks/sph/">STAR+PLUS Handbook</a> contains approved policies and procedures related to the STAR+PLUS program and STAR+PLUS waivers.</li>
+	<li>The <a href="https://hhs.texas.gov/laws-regulations/handbooks/texas-works-handbook">Texas Works Handbook</a> contains information about the policies and procedures used to determine eligibility for SNAP, Temporary Assistance for Needy Families (TANF), and Medical Programs for Families and Children.</li>
+</ul>
+  </div>
+  <div id="book-navigation-186" class="book-navigation">
+    
+        <div class="page-links clearfix">
+                      </div>
+    
+  </div>
+  </div>
+
+  <ul class="links inline"><li class="book_printer first last"><a href="https://hhs.texas.gov/book/export/html/186" title="Show a printer-friendly version of this book page and its sub-pages.">Printer-friendly version</a></li>
+</ul>
+  
+</div>
+  </div>
+</div>
+  </div>
+                          
+                          </div>
+                           <!--/ bye mom -->
+            <!--/PAGEWATCH-->
+                         </div>
+
+                         
+                    </div>
+                    <!--/ .row -->
+
+               </div>
+               <!--/ -->
+
+          </div>
+          <!--/ -->
+
+     </div>
+     <!--/ -->
+
+     
+     <footer id="footer">
+                    <div class="container main-footer">
+               <div class="row">
+
+                    
+                                        <div class="col-md-3">
+                           <div class="region region-footer-1">
+      <div class="region region-footer-1">
+      <div class="region region-footer-1">
+    <div id="block-menu-menu-footer-1" class="block block-menu">
+
+    <h2>Website</h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="../policies-practices-privacy.html" title="">Accessibility</a></li>
+<li class="leaf"><a href="../policies-practices-privacy.html#copyright" title="">Copyright/Disclaimer</a></li>
+<li class="leaf"><a href="../about-hhs/find-us/email-encryption.html" title="">Email Encryption</a></li>
+<li class="leaf"><a href="../file-viewing-information.html" title="">File Viewing</a></li>
+<li class="leaf"><a href="../policies-practices-privacy.html#links" title="">Links</a></li>
+<li class="leaf"><a href="../policies-practices-privacy.html#security" title="">Site Privacy and Security</a></li>
+<li class="last leaf"><a href="mailto:webmaster@hhsc.state.tx.us?subject=Problem with HHS website" title="">Report Website Problems</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </div>
+  </div>
+                    </div>
+                    
+                                        <div class="col-md-3">
+                           <div class="region region-footer-2">
+      <div class="region region-footer-2">
+    <div id="block-menu-menu-footer-2" class="block block-menu">
+
+    <h2>About HHS</h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="../about-hhs/your-rights/compact-texans.html" title="">Compact with Texans</a></li>
+<li class="leaf"><a href="../policies-practices-privacy.html#ethics" title="">Ethics Policy</a></li>
+<li class="leaf"><a href="../about-hhs/find-us.html" title="">Find Us</a></li>
+<li class="leaf"><a href="https://yourtexasbenefits.hhsc.texas.gov/" title="">How to Get Help</a></li>
+<li class="leaf"><a href="../about-hhs/jobs-hhs.html" title="">Jobs at HHS</a></li>
+<li class="leaf"><a href="../health-human-services-agencies-notice-privacy-practices.html" title="">Notice of Privacy Practices</a></li>
+<li class="leaf"><a href="https://oig.hhsc.texas.gov/report-fraud" title="">Report Fraud, Waste and Abuse</a></li>
+<li class="last leaf"><a href="https://yourtexasbenefits.com/ssp/SSPHome/ssphome.jsp" title="">Your Texas Benefits</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </div>
+                    </div>
+                    
+                                        <div class="col-md-3">
+                           <div class="region region-footer-3">
+      <div class="region region-footer-3">
+    <div id="block-menu-menu-footer-3" class="block block-menu">
+
+    <h2>State of Texas</h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="https://www.tsl.texas.gov/trail/index.html" title="">Statewide Search</a></li>
+<li class="leaf"><a href="https://www.texas.gov/" title="">Texas.gov</a></li>
+<li class="leaf"><a href="http://gov.texas.gov/hsgd" title="">Texas Homeland Security</a></li>
+<li class="last leaf"><a href="http://veterans.portal.texas.gov/" title="">Texas Veteran&#039;s Portal</a></li>
+</ul>  </div>
+</div>
+  </div>
+  </div>
+                    </div>
+                    
+                                        <div class="col-md-4">
+                           <div class="region region-footer-4">
+      <div class="region region-footer-4">
+    <div id="block-block-906" class="block block-block">
+
+    <h2>HHS Social Media</h2>
+  
+  <div class="content">
+    <p>Keep up with what’s new at HHS.<br />
+Visit our social media directory.</p>
+
+<p><a href="../about-hhs/communications-events/social-media.html" title="Visit our social media directory."><img alt="Visit our social media directory" src="../sites/default/files/assets/socialfooter.png" /> </a></p>
+  </div>
+</div>
+  </div>
+  </div>
+                    </div>
+                    
+               </div>
+          </div>
+                    <!-- .footer-copyright -->
+          <div class="footer-copyright">
+               <div class="container">
+                    <div class="row">
+                         <div class="col-md-6">
+
+                                                                                          
+                         </div>
+                         <div class="col-md-6">
+
+                                                                                          
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <!--/ .footer-copyright -->
+     </footer>
+     <!--/ footer -->
+</div>
+<script type="text/javascript" src="../sites/default/files/js/js_YahudoGDptCjQYHFrgDsJGi10zzAFfyf-zVAqrbf5mE.js"></script>
+<script type="text/javascript" src="../sites/default/files/js/js_txvBmhHmVRTlr_VZe3_8vJSUc67vgUNbG7zLoAab5gA.js"></script>
+
+<!-- start 3rd party scripts -->
+
+<!--/ end 3rd party scripts -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e4e002b3c6","applicationID":"4406418","transactionName":"MVdVMUBQC0AAV0MLWwgddgZGWApdTkRWBVE5X1YLU1YAQT5aWAZROUReAEVuFVIGUQ==","queueTime":0,"applicationTime":1110,"atts":"HRBWRwhKGE4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
